@@ -1,0 +1,42 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# VS Code
+.vscode/
+
+# Logs
+logs/*.log
+
+# Generated data
+data/bronze/*.csv
+data/bronze/*.json
+data/silver/*
+data/gold/*
+
+# Generated reports
+reports/quality/*
+reports/analysis/*
+
+# Keep empty folder structure
+!data/bronze/.gitkeep
+!data/silver/.gitkeep
+!data/gold/.gitkeep
+!logs/.gitkeep
+!reports/quality/.gitkeep
+
+# Power BI temporary files
+*.tmp
+*.pbit.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Source dataset
+data/source/*.csv
