@@ -952,3 +952,39 @@ Power BI
 ```
 
 to transform a raw synthetic Alzheimer's disease dataset into a reproducible analytical and decision-support solution.
+
+---
+
+## 29. Reproducibility Notes
+
+### Docker and Airflow
+
+Create your local environment file from the provided example:
+
+    Copy-Item .env.example .env
+
+Replace the placeholder security values in `.env`.
+
+Build the custom Airflow image containing the project dependencies:
+
+    docker compose build
+
+Then initialise and start Airflow:
+
+    docker compose up airflow-init
+    docker compose up -d
+
+### Power BI on Another Computer
+
+The Power BI semantic model uses local CSV file paths.
+
+After cloning the repository on another computer, first generate the Power BI exports:
+
+    python -m src.export_powerbi
+
+Then regenerate the semantic-model paths for the new project location:
+
+    powershell -ExecutionPolicy Bypass -File dashboard\scripts\build_semantic_model.ps1
+
+The script automatically detects the repository location and creates the correct local paths for the current computer.
+

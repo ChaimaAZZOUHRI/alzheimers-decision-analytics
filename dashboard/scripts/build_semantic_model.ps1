@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$ProjectRoot = (Resolve-Path ".").Path
+$ProjectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $ModelRoot = Join-Path $ProjectRoot "dashboard\alzheimers_dashboard.SemanticModel\definition"
 $TablesDir = Join-Path $ModelRoot "tables"
 $CsvRoot = Join-Path $ProjectRoot "data\gold\powerbi"
@@ -298,4 +298,3 @@ Write-Host ""
 Write-Host "Semantic model files created successfully."
 Write-Host "Tables: $($tables.Count)"
 Write-Host "Location: $ModelRoot"
-
