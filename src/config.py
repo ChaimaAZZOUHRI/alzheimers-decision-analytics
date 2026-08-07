@@ -142,3 +142,15 @@ def create_directories() -> None:
 
     for directory in directories:
         directory.mkdir(parents=True, exist_ok=True)
+# Silver output files
+SILVER_PARQUET_FILE = (
+    SILVER_DIR / "alzheimers_disease_data_silver.parquet"
+)
+
+SILVER_CSV_FILE = (
+    SILVER_DIR / "alzheimers_disease_data_silver.csv"
+)
+
+SILVER_METADATA_FILE = (
+    SILVER_DIR / "alzheimers_disease_data_silver_metadata.json"
+)
