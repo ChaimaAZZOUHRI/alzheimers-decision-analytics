@@ -1,46 +1,90 @@
-# Python virtual environment
+# ============================================================
+# Python
+# ============================================================
 .venv/
 venv/
-
-# Python cache
 __pycache__/
 *.py[cod]
 .pytest_cache/
 
-# VS Code
+# ============================================================
+# Environment / secrets
+# ============================================================
+.env
+.env.*
+!.env.example
+
+# ============================================================
+# IDE / OS
+# ============================================================
 .vscode/
-
-# Logs
-logs/*.log
-
-# Generated data
-data/bronze/*.csv
-data/bronze/*.json
-data/silver/*
-data/gold/*
-
-# Generated reports
-reports/quality/*
-reports/analysis/*
-
-# Keep empty folder structure
-!data/bronze/.gitkeep
-!data/silver/.gitkeep
-!data/gold/.gitkeep
-!logs/.gitkeep
-!reports/quality/.gitkeep
-
-# Power BI temporary files
-*.tmp
-*.pbit.tmp
-
-# Operating system files
 .DS_Store
 Thumbs.db
 
+# ============================================================
+# Airflow runtime
+# ============================================================
+logs/*
+!logs/.gitkeep
+
+config/*
+!config/.gitkeep
+
+# ============================================================
 # Source dataset
+# ============================================================
 data/source/*.csv
-# Generated Power BI exports
-data/gold/powerbi/*.csv
-data/gold/powerbi/*.json
-!data/gold/powerbi/.gitkeep
+!data/source/.gitkeep
+
+# ============================================================
+# Generated Bronze data
+# ============================================================
+data/bronze/*
+!data/bronze/.gitkeep
+
+# ============================================================
+# Generated Silver data
+# ============================================================
+data/silver/*
+!data/silver/.gitkeep
+
+# ============================================================
+# Generated Gold / Power BI exports
+# ============================================================
+data/gold/*
+!data/gold/.gitkeep
+
+# ============================================================
+# Generated DuckDB warehouse
+# ============================================================
+data/warehouse/*
+!data/warehouse/.gitkeep
+
+# ============================================================
+# Generated reports
+# ============================================================
+reports/quality/*
+!reports/quality/.gitkeep
+
+# ============================================================
+# dbt generated artifacts
+# ============================================================
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+
+# ============================================================
+# Power BI local-machine files
+# ============================================================
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+*.tmp
+*.pbit.tmp
+
+# ============================================================
+# Temporary / backup files
+# ============================================================
+*.bak
+*.backup
+dashboard/validation_output.txt
+dashboard/powerbi_visual_metadata.txt

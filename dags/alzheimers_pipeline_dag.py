@@ -155,6 +155,7 @@ def alzheimers_decision_pipeline():
         command = [
             "dbt",
             "build",
+            "--no-partial-parse",
             "--project-dir",
             "/opt/airflow/dbt_project",
             "--profiles-dir",
@@ -228,4 +229,3 @@ def alzheimers_decision_pipeline():
 
 
 alzheimers_decision_pipeline()
-
