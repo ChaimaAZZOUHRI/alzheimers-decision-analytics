@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_alzheimer_patients
+    description: >
+      Standardized staging view containing one record
+      per Alzheimer dataset patient.
+
+    columns:
+      - name: patient_id
+        description: Unique patient identifier.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: age
+        description: Patient age in years.
+        data_tests:
+          - not_null
+
+      - name: diagnosis_code
+        description: Diagnosis indicator.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+      - name: diagnosis_label
+        description: Readable diagnosis category.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Diagnosed
+                  - Not Diagnosed
+
+      - name: age_group
+        description: Patient age category.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - "60-69"
+                  - "70-79"
+                  - "80-90"
+
+      - name: processing_timestamp_utc
+        description: Silver processing timestamp.
+        data_tests:
+          - not_null

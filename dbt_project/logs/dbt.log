@@ -1,0 +1,2201 @@
+[0m01:47:58.537247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFAD15AD20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFACCB5340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFAEB85310>]}
+
+
+============================== 01:47:58.546767 | 5529191c-323f-486e-bc30-6c77f24e8fb9 ==============================
+[0m01:47:58.546767 [info ] [MainThread]: Running with dbt=1.12.0
+[0m01:47:58.547771 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt_project', 'invocation_command': 'dbt debug --project-dir dbt_project --profiles-dir dbt_project', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt_project\\logs'}
+[0m01:47:58.617731 [info ] [MainThread]: dbt version: 1.12.0
+[0m01:47:58.618731 [info ] [MainThread]: python version: 3.12.10
+[0m01:47:58.619733 [info ] [MainThread]: python path: C:\Users\chaima\Desktop\alzheimers-decision-analytics\.venv\Scripts\python.exe
+[0m01:47:58.622252 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m01:47:58.981254 [info ] [MainThread]: Using profiles dir at dbt_project
+[0m01:47:58.983260 [info ] [MainThread]: Using profiles.yml file at dbt_project\profiles.yml
+[0m01:47:58.984771 [info ] [MainThread]: Using dbt_project.yml file at dbt_project\dbt_project.yml
+[0m01:47:58.992315 [info ] [MainThread]: adapter type: duckdb
+[0m01:47:58.993819 [info ] [MainThread]: adapter version: 1.10.1
+[0m01:47:59.428223 [info ] [MainThread]: Configuration:
+[0m01:47:59.429923 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:47:59.432790 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m01:47:59.434617 [info ] [MainThread]: Required dependencies:
+[0m01:47:59.436897 [debug] [MainThread]: Executing "git --help"
+[0m01:47:59.583786 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m01:47:59.585297 [debug] [MainThread]: STDERR: "b''"
+[0m01:47:59.587311 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m01:47:59.588312 [info ] [MainThread]: Connection:
+[0m01:47:59.590310 [info ] [MainThread]:   database: alzheimers_analytics
+[0m01:47:59.591822 [info ] [MainThread]:   schema: analytics
+[0m01:47:59.594834 [info ] [MainThread]:   path: ../data/warehouse/alzheimers_analytics.duckdb
+[0m01:47:59.596835 [info ] [MainThread]:   config_options: None
+[0m01:47:59.598359 [info ] [MainThread]:   extensions: None
+[0m01:47:59.600358 [info ] [MainThread]:   settings: {}
+[0m01:47:59.601868 [info ] [MainThread]:   external_root: .
+[0m01:47:59.602881 [info ] [MainThread]:   use_credential_provider: None
+[0m01:47:59.604886 [info ] [MainThread]:   attach: None
+[0m01:47:59.608056 [info ] [MainThread]:   filesystems: None
+[0m01:47:59.618654 [info ] [MainThread]:   remote: None
+[0m01:47:59.620652 [info ] [MainThread]:   plugins: None
+[0m01:47:59.624220 [info ] [MainThread]:   disable_transactions: False
+[0m01:47:59.628796 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m01:48:00.609122 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m01:48:10.304875 [debug] [MainThread]: Using duckdb connection "debug"
+[0m01:48:10.306874 [debug] [MainThread]: On debug: select 1 as id
+[0m01:48:10.307877 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:48:10.922018 [debug] [MainThread]: DuckDB adapter: duckdb error: IO Error: Cannot open file "c:\users\chaima\desktop\alzheimers-decision-analytics\..\data\warehouse\alzheimers_analytics.duckdb": The system cannot find the path specified.
+
+[0m01:48:10.923020 [debug] [MainThread]: DuckDB adapter: Error running SQL: select 1 as id
+[0m01:48:10.924027 [debug] [MainThread]: DuckDB adapter: Rolling back transaction.
+[0m01:48:10.924027 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:48:11.144196 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m01:48:11.147240 [info ] [MainThread]: [31m1 check failed:[0m
+[0m01:48:11.148257 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >IO Error: Cannot open file "c:\users\chaima\desktop\alzheimers-decision-analytics\..\data\warehouse\alzheimers_analytics.duckdb": The system cannot find the path specified.
+
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m01:48:11.151259 [debug] [MainThread]: Command `dbt debug` failed at 01:48:11.151259 after 13.31 seconds
+[0m01:48:11.153258 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m01:48:11.155770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFACA0FEF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFAEE30890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFAEE50EF0>]}
+[0m01:48:11.156788 [debug] [MainThread]: Flushing usage events
+[0m01:48:12.821973 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:49:41.156310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AE81FBDA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AE81F9F40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AE9248380>]}
+
+
+============================== 01:49:41.170348 | 3fc81088-8da1-411b-a6c7-6363cb8d2bd8 ==============================
+[0m01:49:41.170348 [info ] [MainThread]: Running with dbt=1.12.0
+[0m01:49:41.172873 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug --project-dir dbt_project --profiles-dir dbt_project', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt_project\\logs'}
+[0m01:49:41.249912 [info ] [MainThread]: dbt version: 1.12.0
+[0m01:49:41.251911 [info ] [MainThread]: python version: 3.12.10
+[0m01:49:41.254435 [info ] [MainThread]: python path: C:\Users\chaima\Desktop\alzheimers-decision-analytics\.venv\Scripts\python.exe
+[0m01:49:41.257436 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m01:49:41.597438 [info ] [MainThread]: Using profiles dir at dbt_project
+[0m01:49:41.599436 [info ] [MainThread]: Using profiles.yml file at dbt_project\profiles.yml
+[0m01:49:41.600950 [info ] [MainThread]: Using dbt_project.yml file at dbt_project\dbt_project.yml
+[0m01:49:41.609679 [info ] [MainThread]: adapter type: duckdb
+[0m01:49:41.611696 [info ] [MainThread]: adapter version: 1.10.1
+[0m01:49:42.068054 [info ] [MainThread]: Configuration:
+[0m01:49:42.069575 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:49:42.071592 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m01:49:42.074579 [info ] [MainThread]: Required dependencies:
+[0m01:49:42.075576 [debug] [MainThread]: Executing "git --help"
+[0m01:49:42.225485 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m01:49:42.227489 [debug] [MainThread]: STDERR: "b''"
+[0m01:49:42.228486 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m01:49:42.229491 [info ] [MainThread]: Connection:
+[0m01:49:42.233018 [info ] [MainThread]:   database: alzheimers_analytics
+[0m01:49:42.236067 [info ] [MainThread]:   schema: analytics
+[0m01:49:42.237020 [info ] [MainThread]:   path: data/warehouse/alzheimers_analytics.duckdb
+[0m01:49:42.241033 [info ] [MainThread]:   config_options: None
+[0m01:49:42.242034 [info ] [MainThread]:   extensions: None
+[0m01:49:42.244031 [info ] [MainThread]:   settings: {}
+[0m01:49:42.246031 [info ] [MainThread]:   external_root: .
+[0m01:49:42.247543 [info ] [MainThread]:   use_credential_provider: None
+[0m01:49:42.248587 [info ] [MainThread]:   attach: None
+[0m01:49:42.253138 [info ] [MainThread]:   filesystems: None
+[0m01:49:42.254136 [info ] [MainThread]:   remote: None
+[0m01:49:42.257652 [info ] [MainThread]:   plugins: None
+[0m01:49:42.260664 [info ] [MainThread]:   disable_transactions: False
+[0m01:49:42.267200 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m01:49:43.445229 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m01:49:43.690750 [debug] [MainThread]: Using duckdb connection "debug"
+[0m01:49:43.691751 [debug] [MainThread]: On debug: select 1 as id
+[0m01:49:43.693274 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:49:43.724121 [debug] [MainThread]: SQL status: OK in 0.031 seconds
+[0m01:49:43.727116 [debug] [MainThread]: On debug: Close
+[0m01:49:43.728109 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m01:49:43.729627 [info ] [MainThread]: [32mAll checks passed![0m
+[0m01:49:43.732653 [debug] [MainThread]: Command `dbt debug` succeeded at 01:49:43.731639 after 3.45 seconds
+[0m01:49:43.733643 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m01:49:43.733643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AEA61ED20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AE8883050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028AE8882F30>]}
+[0m01:49:43.735144 [debug] [MainThread]: Flushing usage events
+[0m01:49:45.412043 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:52:11.382744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A719068C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A718529370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A718529A90>]}
+
+
+============================== 01:52:11.397342 | 54e130a1-b006-4334-b1ec-a24e83b3612c ==============================
+[0m01:52:11.397342 [info ] [MainThread]: Running with dbt=1.12.0
+[0m01:52:11.400342 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt parse --project-dir dbt_project --profiles-dir dbt_project', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt_project\\logs'}
+[0m01:52:12.349565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '54e130a1-b006-4334-b1ec-a24e83b3612c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A71A9057C0>]}
+[0m01:52:12.614433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '54e130a1-b006-4334-b1ec-a24e83b3612c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A71866A6C0>]}
+[0m01:52:12.624561 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m01:52:13.722348 [debug] [MainThread]: checksum: 5c4034932e428399a5d725711ec71ca090a03185d39b7ded05a71e18c8a10a58, vars: {}, profile: alzheimers_analytics, target: dev, version: 1.12.0
+[0m01:52:13.725853 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m01:52:13.727866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '54e130a1-b006-4334-b1ec-a24e83b3612c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A71ABB5A30>]}
+[0m01:52:23.379039 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.alzheimers_analytics.intermediate
+- models.alzheimers_analytics.marts
+[0m01:52:23.392355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '54e130a1-b006-4334-b1ec-a24e83b3612c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A71B25BC80>]}
+[0m01:52:23.411421 [info ] [MainThread]: Performance info: dbt_project\target\perf_info.json
+[0m01:52:23.855702 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m01:52:23.867758 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m01:52:23.963197 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m01:52:23.966196 [debug] [MainThread]: Command `dbt parse` succeeded at 01:52:23.966196 after 13.28 seconds
+[0m01:52:23.968202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A71AB96690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A71B112AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A71855BF80>]}
+[0m01:52:23.969202 [debug] [MainThread]: Flushing usage events
+[0m01:52:25.500278 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:52:41.235922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F097B290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220EDC70E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F02193A0>]}
+
+
+============================== 01:52:41.243606 | 2b23c084-9ea3-4f86-bad8-989f261caf45 ==============================
+[0m01:52:41.243606 [info ] [MainThread]: Running with dbt=1.12.0
+[0m01:52:41.244606 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt_project', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt ls --project-dir dbt_project --profiles-dir dbt_project --resource-type source', 'log_path': 'dbt_project\\logs'}
+[0m01:52:41.950052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2b23c084-9ea3-4f86-bad8-989f261caf45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F07061E0>]}
+[0m01:52:42.195835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2b23c084-9ea3-4f86-bad8-989f261caf45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F27CADE0>]}
+[0m01:52:42.204872 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m01:52:43.065675 [debug] [MainThread]: checksum: 5c4034932e428399a5d725711ec71ca090a03185d39b7ded05a71e18c8a10a58, vars: {}, profile: alzheimers_analytics, target: dev, version: 1.12.0
+[0m01:52:43.626633 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:52:43.627646 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m01:52:43.628646 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:52:43.648272 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.alzheimers_analytics.marts
+- models.alzheimers_analytics.intermediate
+[0m01:52:43.660792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2b23c084-9ea3-4f86-bad8-989f261caf45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F0946FC0>]}
+[0m01:52:44.093620 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m01:52:44.103195 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m01:52:44.181317 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m01:52:44.317606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2b23c084-9ea3-4f86-bad8-989f261caf45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F2D7EA50>]}
+[0m01:52:44.318604 [info ] [MainThread]: Found 1 model, 5 data tests, 1 source, 486 macros
+[0m01:52:44.321131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2b23c084-9ea3-4f86-bad8-989f261caf45', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F2D688F0>]}
+[0m01:52:44.324130 [info ] [MainThread]: source:alzheimers_analytics.silver.silver_alzheimer_patients
+[0m01:52:44.331838 [debug] [MainThread]: Command `dbt ls` succeeded at 01:52:44.330823 after 3.48 seconds
+[0m01:52:44.332349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F09AA5A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F029FBC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220F0E54530>]}
+[0m01:52:44.334371 [debug] [MainThread]: Flushing usage events
+[0m01:52:45.857940 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:53:05.441845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CDF853D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CDF852B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CDF85190>]}
+
+
+============================== 01:53:05.451829 | edcdfbd2-ba41-4c61-b5e5-869f3a6b5b55 ==============================
+[0m01:53:05.451829 [info ] [MainThread]: Running with dbt=1.12.0
+[0m01:53:05.453339 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test --project-dir dbt_project --profiles-dir dbt_project --select source:silver.silver_alzheimer_patients', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'dbt_project\\logs'}
+[0m01:53:06.131560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'edcdfbd2-ba41-4c61-b5e5-869f3a6b5b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CDEF8260>]}
+[0m01:53:06.291365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'edcdfbd2-ba41-4c61-b5e5-869f3a6b5b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CE35F9E0>]}
+[0m01:53:06.295877 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m01:53:06.852775 [debug] [MainThread]: checksum: 5c4034932e428399a5d725711ec71ca090a03185d39b7ded05a71e18c8a10a58, vars: {}, profile: alzheimers_analytics, target: dev, version: 1.12.0
+[0m01:53:07.448423 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:53:07.450423 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m01:53:07.452423 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:53:07.473114 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.alzheimers_analytics.marts
+- models.alzheimers_analytics.intermediate
+[0m01:53:07.488127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'edcdfbd2-ba41-4c61-b5e5-869f3a6b5b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CC4BB290>]}
+[0m01:53:07.806949 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m01:53:07.813578 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m01:53:07.859899 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m01:53:07.894589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'edcdfbd2-ba41-4c61-b5e5-869f3a6b5b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CE9C4590>]}
+[0m01:53:07.895590 [info ] [MainThread]: Found 1 model, 5 data tests, 1 source, 486 macros
+[0m01:53:07.896589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'edcdfbd2-ba41-4c61-b5e5-869f3a6b5b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CE48BCE0>]}
+[0m01:53:07.899117 [info ] [MainThread]: 
+[0m01:53:07.900115 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m01:53:07.900115 [info ] [MainThread]: 
+[0m01:53:07.901116 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m01:53:07.903774 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_alzheimers_analytics_analytics'
+[0m01:53:08.173312 [debug] [ThreadPool]: Using duckdb connection "list_alzheimers_analytics_analytics"
+[0m01:53:08.174313 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: BEGIN
+[0m01:53:08.176269 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:53:08.200800 [debug] [ThreadPool]: SQL status: OK in 0.025 seconds
+[0m01:53:08.201797 [debug] [ThreadPool]: Using duckdb connection "list_alzheimers_analytics_analytics"
+[0m01:53:08.202798 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "list_alzheimers_analytics_analytics"} */
+select
+      'alzheimers_analytics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'analytics'
+    and lower(table_catalog) = 'alzheimers_analytics'
+  
+[0m01:53:08.282241 [debug] [ThreadPool]: SQL status: OK in 0.078 seconds
+[0m01:53:08.285765 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: ROLLBACK
+[0m01:53:08.287781 [debug] [ThreadPool]: Failed to rollback 'list_alzheimers_analytics_analytics'
+[0m01:53:08.288783 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: Close
+[0m01:53:08.290778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'edcdfbd2-ba41-4c61-b5e5-869f3a6b5b55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CE9C5670>]}
+[0m01:53:08.291775 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:53:08.292777 [debug] [MainThread]: On master: BEGIN
+[0m01:53:08.292777 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:53:08.294780 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m01:53:08.294780 [debug] [MainThread]: On master: COMMIT
+[0m01:53:08.295779 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:53:08.295779 [debug] [MainThread]: On master: COMMIT
+[0m01:53:08.296782 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m01:53:08.297782 [debug] [MainThread]: On master: Close
+[0m01:53:08.362675 [debug] [Thread-1 (]: Began running node test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2
+[0m01:53:08.364384 [debug] [Thread-2 (]: Began running node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997
+[0m01:53:08.366107 [debug] [Thread-3 (]: Began running node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d
+[0m01:53:08.368117 [debug] [Thread-4 (]: Began running node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1
+[0m01:53:08.367123 [info ] [Thread-1 (]: 1 of 5 START test source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1  [RUN]
+[0m01:53:08.370630 [info ] [Thread-2 (]: 2 of 5 START test source_not_null_silver_silver_alzheimer_patients_Diagnosis ... [RUN]
+[0m01:53:08.373640 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2'
+[0m01:53:08.370630 [info ] [Thread-3 (]: 3 of 5 START test source_not_null_silver_silver_alzheimer_patients_PatientID ... [RUN]
+[0m01:53:08.376642 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997'
+[0m01:53:08.372641 [info ] [Thread-4 (]: 4 of 5 START test source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC  [RUN]
+[0m01:53:08.377643 [debug] [Thread-1 (]: Began compiling node test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2
+[0m01:53:08.379641 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d'
+[0m01:53:08.414955 [debug] [Thread-3 (]: Began compiling node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d
+[0m01:53:08.383643 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1'
+[0m01:53:08.381641 [debug] [Thread-2 (]: Began compiling node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997
+[0m01:53:08.555150 [debug] [Thread-4 (]: Began compiling node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1
+[0m01:53:08.564674 [debug] [Thread-1 (]: Writing injected SQL for node "test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2"
+[0m01:53:08.573386 [debug] [Thread-3 (]: Writing injected SQL for node "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d"
+[0m01:53:08.593670 [debug] [Thread-2 (]: Writing injected SQL for node "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997"
+[0m01:53:08.612723 [debug] [Thread-4 (]: Writing injected SQL for node "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1"
+[0m01:53:08.621917 [debug] [Thread-1 (]: Began executing node test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2
+[0m01:53:08.665489 [debug] [Thread-2 (]: Began executing node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997
+[0m01:53:08.680254 [debug] [Thread-3 (]: Began executing node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d
+[0m01:53:08.686540 [debug] [Thread-2 (]: Writing runtime sql for node "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997"
+[0m01:53:08.689983 [debug] [Thread-1 (]: Writing runtime sql for node "test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2"
+[0m01:53:08.693500 [debug] [Thread-3 (]: Writing runtime sql for node "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d"
+[0m01:53:08.695520 [debug] [Thread-4 (]: Began executing node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1
+[0m01:53:08.701472 [debug] [Thread-4 (]: Writing runtime sql for node "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1"
+[0m01:53:08.715011 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1"
+[0m01:53:08.716534 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997"
+[0m01:53:08.717534 [debug] [Thread-4 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1: BEGIN
+[0m01:53:08.719534 [debug] [Thread-2 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997: BEGIN
+[0m01:53:08.719534 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m01:53:08.722063 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2"
+[0m01:53:08.723897 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m01:53:08.725907 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d"
+[0m01:53:08.726907 [debug] [Thread-1 (]: On test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2: BEGIN
+[0m01:53:08.729913 [debug] [Thread-3 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d: BEGIN
+[0m01:53:08.730908 [debug] [Thread-4 (]: SQL status: OK in 0.010 seconds
+[0m01:53:08.731907 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m01:53:08.733416 [debug] [Thread-2 (]: SQL status: OK in 0.010 seconds
+[0m01:53:08.734426 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m01:53:08.735425 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1"
+[0m01:53:08.737426 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997"
+[0m01:53:08.738428 [debug] [Thread-4 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ProcessingTimestampUTC
+from "alzheimers_analytics"."main"."silver_alzheimer_patients"
+where ProcessingTimestampUTC is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:53:08.740959 [debug] [Thread-2 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select Diagnosis
+from "alzheimers_analytics"."main"."silver_alzheimer_patients"
+where Diagnosis is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:53:08.741960 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m01:53:08.743965 [debug] [Thread-3 (]: SQL status: OK in 0.009 seconds
+[0m01:53:08.745960 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2"
+[0m01:53:08.746957 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d"
+[0m01:53:08.747959 [debug] [Thread-1 (]: On test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        Diagnosis as value_field,
+        count(*) as n_records
+
+    from "alzheimers_analytics"."main"."silver_alzheimer_patients"
+    group by Diagnosis
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:53:08.750483 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m01:53:08.751483 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m01:53:08.753479 [debug] [Thread-3 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select PatientID
+from "alzheimers_analytics"."main"."silver_alzheimer_patients"
+where PatientID is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:53:08.766652 [debug] [Thread-4 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1: ROLLBACK
+[0m01:53:08.771239 [debug] [Thread-2 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997: ROLLBACK
+[0m01:53:08.773236 [debug] [Thread-1 (]: SQL status: OK in 0.018 seconds
+[0m01:53:08.777747 [debug] [Thread-4 (]: Failed to rollback 'test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1'
+[0m01:53:08.780757 [debug] [Thread-2 (]: Failed to rollback 'test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997'
+[0m01:53:08.782770 [debug] [Thread-3 (]: SQL status: OK in 0.010 seconds
+[0m01:53:08.786911 [debug] [Thread-1 (]: On test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2: ROLLBACK
+[0m01:53:08.788912 [debug] [Thread-4 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1: Close
+[0m01:53:08.789911 [debug] [Thread-2 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997: Close
+[0m01:53:08.794946 [debug] [Thread-3 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d: ROLLBACK
+[0m01:53:08.798958 [debug] [Thread-1 (]: Failed to rollback 'test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2'
+[0m01:53:08.800960 [info ] [Thread-4 (]: 4 of 5 PASS source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC  [[32mPASS[0m in 0.42s]
+[0m01:53:08.807484 [debug] [Thread-3 (]: Failed to rollback 'test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d'
+[0m01:53:08.808484 [debug] [Thread-1 (]: On test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2: Close
+[0m01:53:08.810997 [debug] [Thread-4 (]: Finished running node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1
+[0m01:53:08.803470 [info ] [Thread-2 (]: 2 of 5 PASS source_not_null_silver_silver_alzheimer_patients_Diagnosis ......... [[32mPASS[0m in 0.43s]
+[0m01:53:08.813009 [debug] [Thread-3 (]: On test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d: Close
+[0m01:53:08.817078 [debug] [Thread-4 (]: Began running node test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260
+[0m01:53:08.815080 [info ] [Thread-1 (]: 1 of 5 PASS source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1  [[32mPASS[0m in 0.44s]
+[0m01:53:08.820078 [debug] [Thread-2 (]: Finished running node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997
+[0m01:53:08.824689 [info ] [Thread-3 (]: 3 of 5 PASS source_not_null_silver_silver_alzheimer_patients_PatientID ......... [[32mPASS[0m in 0.45s]
+[0m01:53:08.829711 [debug] [Thread-1 (]: Finished running node test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2
+[0m01:53:08.834782 [debug] [Thread-3 (]: Finished running node test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d
+[0m01:53:08.826688 [info ] [Thread-4 (]: 5 of 5 START test source_unique_silver_silver_alzheimer_patients_PatientID ..... [RUN]
+[0m01:53:08.837769 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_ProcessingTimestampUTC.1ac8f67ce1, now test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260)
+[0m01:53:08.841369 [debug] [Thread-4 (]: Began compiling node test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260
+[0m01:53:08.889193 [debug] [Thread-4 (]: Writing injected SQL for node "test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260"
+[0m01:53:08.892756 [debug] [Thread-4 (]: Began executing node test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260
+[0m01:53:08.899424 [debug] [Thread-4 (]: Writing runtime sql for node "test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260"
+[0m01:53:08.902431 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260"
+[0m01:53:08.904425 [debug] [Thread-4 (]: On test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260: BEGIN
+[0m01:53:08.905427 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m01:53:08.906424 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m01:53:08.908967 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260"
+[0m01:53:08.909963 [debug] [Thread-4 (]: On test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    PatientID as unique_field,
+    count(*) as n_records
+
+from "alzheimers_analytics"."main"."silver_alzheimer_patients"
+where PatientID is not null
+group by PatientID
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:53:08.915385 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m01:53:08.920013 [debug] [Thread-4 (]: On test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260: ROLLBACK
+[0m01:53:08.923013 [debug] [Thread-4 (]: Failed to rollback 'test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260'
+[0m01:53:08.924522 [debug] [Thread-4 (]: On test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260: Close
+[0m01:53:08.926534 [info ] [Thread-4 (]: 5 of 5 PASS source_unique_silver_silver_alzheimer_patients_PatientID ........... [[32mPASS[0m in 0.09s]
+[0m01:53:08.929533 [debug] [Thread-4 (]: Finished running node test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260
+[0m01:53:08.933538 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:53:08.934533 [debug] [MainThread]: On master: BEGIN
+[0m01:53:08.935539 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:53:08.936533 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m01:53:08.937532 [debug] [MainThread]: On master: COMMIT
+[0m01:53:08.938532 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:53:08.939539 [debug] [MainThread]: On master: COMMIT
+[0m01:53:08.940539 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m01:53:08.941532 [debug] [MainThread]: On master: Close
+[0m01:53:08.943041 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:53:08.944054 [debug] [MainThread]: Connection 'list_alzheimers_analytics_analytics' was properly closed.
+[0m01:53:08.945052 [debug] [MainThread]: Connection 'test.alzheimers_analytics.source_accepted_values_silver_silver_alzheimer_patients_Diagnosis__0__1.c9ea2106d2' was properly closed.
+[0m01:53:08.946058 [debug] [MainThread]: Connection 'test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_Diagnosis.1fab54f997' was properly closed.
+[0m01:53:08.948054 [debug] [MainThread]: Connection 'test.alzheimers_analytics.source_not_null_silver_silver_alzheimer_patients_PatientID.c29216e98d' was properly closed.
+[0m01:53:08.949061 [debug] [MainThread]: Connection 'test.alzheimers_analytics.source_unique_silver_silver_alzheimer_patients_PatientID.0f9c980260' was properly closed.
+[0m01:53:08.950055 [info ] [MainThread]: 
+[0m01:53:08.952055 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 1.05 seconds (1.05s).
+[0m01:53:08.957058 [debug] [MainThread]: Command end result
+[0m01:53:09.034967 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m01:53:09.051746 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m01:53:09.064507 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m01:53:09.087199 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt_project\target\run_results.json
+[0m01:53:09.090173 [info ] [MainThread]: 
+[0m01:53:09.091542 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:53:09.092170 [info ] [MainThread]: 
+[0m01:53:09.093170 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=5
+[0m01:53:09.095178 [debug] [MainThread]: Command `dbt test` succeeded at 01:53:09.095178 after 4.09 seconds
+[0m01:53:09.096175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CC816570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CC3CBFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234CA387350>]}
+[0m01:53:09.096175 [debug] [MainThread]: Flushing usage events
+[0m01:53:10.752429 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:55:12.844298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA17181FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA15415FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA13083470>]}
+
+
+============================== 01:55:12.859094 | 14aada19-7721-4f6a-9544-7d784fc9dd28 ==============================
+[0m01:55:12.859094 [info ] [MainThread]: Running with dbt=1.12.0
+[0m01:55:12.862462 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt_project', 'invocation_command': 'dbt ls --project-dir dbt_project --profiles-dir dbt_project --select stg_alzheimer_patients', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt_project\\logs'}
+[0m01:55:13.643102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '14aada19-7721-4f6a-9544-7d784fc9dd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA174120F0>]}
+[0m01:55:13.828050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '14aada19-7721-4f6a-9544-7d784fc9dd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA17098770>]}
+[0m01:55:13.836663 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m01:55:14.711627 [debug] [MainThread]: checksum: 5c4034932e428399a5d725711ec71ca090a03185d39b7ded05a71e18c8a10a58, vars: {}, profile: alzheimers_analytics, target: dev, version: 1.12.0
+[0m01:55:15.168086 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m01:55:15.170088 [debug] [MainThread]: Partial parsing: added file: alzheimers_analytics://models\staging\stg_alzheimer_patients.yml
+[0m01:55:15.171086 [debug] [MainThread]: Partial parsing: updated file: alzheimers_analytics://models\staging\stg_alzheimer_patients.sql
+[0m01:55:16.681862 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.alzheimers_analytics.intermediate
+- models.alzheimers_analytics.marts
+[0m01:55:16.687910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '14aada19-7721-4f6a-9544-7d784fc9dd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA17A0C9E0>]}
+[0m01:55:16.989039 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m01:55:16.999076 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m01:55:17.088419 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m01:55:17.175041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '14aada19-7721-4f6a-9544-7d784fc9dd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA17C4E360>]}
+[0m01:55:17.176587 [info ] [MainThread]: Found 15 data tests, 1 model, 1 source, 486 macros
+[0m01:55:17.178137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14aada19-7721-4f6a-9544-7d784fc9dd28', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA17B11AF0>]}
+[0m01:55:17.180159 [info ] [MainThread]: alzheimers_analytics.staging.stg_alzheimer_patients
+[0m01:55:17.181164 [info ] [MainThread]: alzheimers_analytics.staging.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90
+[0m01:55:17.183693 [info ] [MainThread]: alzheimers_analytics.staging.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1
+[0m01:55:17.187214 [info ] [MainThread]: alzheimers_analytics.staging.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed
+[0m01:55:17.188738 [info ] [MainThread]: alzheimers_analytics.staging.not_null_stg_alzheimer_patients_age
+[0m01:55:17.190734 [info ] [MainThread]: alzheimers_analytics.staging.not_null_stg_alzheimer_patients_age_group
+[0m01:55:17.192848 [info ] [MainThread]: alzheimers_analytics.staging.not_null_stg_alzheimer_patients_diagnosis_code
+[0m01:55:17.196862 [info ] [MainThread]: alzheimers_analytics.staging.not_null_stg_alzheimer_patients_diagnosis_label
+[0m01:55:17.203989 [info ] [MainThread]: alzheimers_analytics.staging.not_null_stg_alzheimer_patients_patient_id
+[0m01:55:17.207085 [info ] [MainThread]: alzheimers_analytics.staging.not_null_stg_alzheimer_patients_processing_timestamp_utc
+[0m01:55:17.208630 [info ] [MainThread]: alzheimers_analytics.staging.unique_stg_alzheimer_patients_patient_id
+[0m01:55:17.215164 [debug] [MainThread]: Command `dbt ls` succeeded at 01:55:17.214145 after 4.87 seconds
+[0m01:55:17.219168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA133D35C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA133D0F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA130BA750>]}
+[0m01:55:17.221696 [debug] [MainThread]: Flushing usage events
+[0m01:55:18.539244 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:56:30.843782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599D89F200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599D89DEE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A14A8800>]}
+
+
+============================== 01:56:30.856857 | f99cce0d-ff87-430b-bde6-cece361d3c53 ==============================
+[0m01:56:30.856857 [info ] [MainThread]: Running with dbt=1.12.0
+[0m01:56:30.858869 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt build --project-dir dbt_project --profiles-dir dbt_project --select stg_alzheimer_patients', 'log_path': 'dbt_project\\logs'}
+[0m01:56:31.727803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f99cce0d-ff87-430b-bde6-cece361d3c53', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599F3EE7B0>]}
+[0m01:56:32.012090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f99cce0d-ff87-430b-bde6-cece361d3c53', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599F44A5A0>]}
+[0m01:56:32.020631 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m01:56:32.995515 [debug] [MainThread]: checksum: 5c4034932e428399a5d725711ec71ca090a03185d39b7ded05a71e18c8a10a58, vars: {}, profile: alzheimers_analytics, target: dev, version: 1.12.0
+[0m01:56:33.611992 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:56:33.613035 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m01:56:33.615055 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:56:33.640251 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.alzheimers_analytics.marts
+- models.alzheimers_analytics.intermediate
+[0m01:56:33.664865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f99cce0d-ff87-430b-bde6-cece361d3c53', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599CF2D460>]}
+[0m01:56:34.395073 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m01:56:34.409107 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m01:56:34.566194 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m01:56:34.682004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f99cce0d-ff87-430b-bde6-cece361d3c53', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A1FDBF80>]}
+[0m01:56:34.684003 [info ] [MainThread]: Found 15 data tests, 1 model, 1 source, 486 macros
+[0m01:56:34.692224 [info ] [MainThread]: 
+[0m01:56:34.695755 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m01:56:34.699971 [info ] [MainThread]: 
+[0m01:56:34.702981 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m01:56:34.707520 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_alzheimers_analytics'
+[0m01:56:35.188208 [debug] [ThreadPool]: Using duckdb connection "list_alzheimers_analytics"
+[0m01:56:35.189731 [debug] [ThreadPool]: On list_alzheimers_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "list_alzheimers_analytics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"alzheimers_analytics"'
+    
+  
+  
+[0m01:56:35.190776 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:56:35.225487 [debug] [ThreadPool]: SQL status: OK in 0.034 seconds
+[0m01:56:35.231013 [debug] [ThreadPool]: On list_alzheimers_analytics: Close
+[0m01:56:35.235026 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_alzheimers_analytics, now create_alzheimers_analytics_analytics)
+[0m01:56:35.237023 [debug] [ThreadPool]: Creating schema "database: "alzheimers_analytics"
+schema: "analytics"
+"
+[0m01:56:35.260371 [debug] [ThreadPool]: Using duckdb connection "create_alzheimers_analytics_analytics"
+[0m01:56:35.262371 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "create_alzheimers_analytics_analytics"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='alzheimers_analytics'
+        and type='sqlite'
+    
+  
+[0m01:56:35.263882 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:56:35.268414 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m01:56:35.274149 [debug] [ThreadPool]: Using duckdb connection "create_alzheimers_analytics_analytics"
+[0m01:56:35.276148 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: BEGIN
+[0m01:56:35.277153 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m01:56:35.279146 [debug] [ThreadPool]: Using duckdb connection "create_alzheimers_analytics_analytics"
+[0m01:56:35.280148 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "create_alzheimers_analytics_analytics"} */
+
+    
+    
+        create schema if not exists "alzheimers_analytics"."analytics"
+    
+[0m01:56:35.283203 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m01:56:35.286286 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: COMMIT
+[0m01:56:35.287284 [debug] [ThreadPool]: Using duckdb connection "create_alzheimers_analytics_analytics"
+[0m01:56:35.288283 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: COMMIT
+[0m01:56:35.294429 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m01:56:35.295962 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: Close
+[0m01:56:35.300499 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_alzheimers_analytics_analytics'
+[0m01:56:35.319173 [debug] [ThreadPool]: Using duckdb connection "list_alzheimers_analytics_analytics"
+[0m01:56:35.320186 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: BEGIN
+[0m01:56:35.322168 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:56:35.329216 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m01:56:35.331067 [debug] [ThreadPool]: Using duckdb connection "list_alzheimers_analytics_analytics"
+[0m01:56:35.332066 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "list_alzheimers_analytics_analytics"} */
+select
+      'alzheimers_analytics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'analytics'
+    and lower(table_catalog) = 'alzheimers_analytics'
+  
+[0m01:56:35.467199 [debug] [ThreadPool]: SQL status: OK in 0.134 seconds
+[0m01:56:35.472268 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: ROLLBACK
+[0m01:56:35.477834 [debug] [ThreadPool]: Failed to rollback 'list_alzheimers_analytics_analytics'
+[0m01:56:35.481835 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: Close
+[0m01:56:35.485833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f99cce0d-ff87-430b-bde6-cece361d3c53', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A1C18110>]}
+[0m01:56:35.487833 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:56:35.488833 [debug] [MainThread]: On master: BEGIN
+[0m01:56:35.489832 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:56:35.491342 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m01:56:35.492876 [debug] [MainThread]: On master: COMMIT
+[0m01:56:35.494398 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:56:35.495409 [debug] [MainThread]: On master: COMMIT
+[0m01:56:35.497811 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m01:56:35.498830 [debug] [MainThread]: On master: Close
+[0m01:56:35.512349 [debug] [Thread-1 (]: Began running node model.alzheimers_analytics.stg_alzheimer_patients
+[0m01:56:35.513871 [info ] [Thread-1 (]: 1 of 11 START sql view model analytics.stg_alzheimer_patients .................. [RUN]
+[0m01:56:35.517398 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.alzheimers_analytics.stg_alzheimer_patients'
+[0m01:56:35.518914 [debug] [Thread-1 (]: Began compiling node model.alzheimers_analytics.stg_alzheimer_patients
+[0m01:56:35.564924 [debug] [Thread-1 (]: Writing injected SQL for node "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m01:56:35.569446 [debug] [Thread-1 (]: Began executing node model.alzheimers_analytics.stg_alzheimer_patients
+[0m01:56:35.710461 [debug] [Thread-1 (]: Writing runtime sql for node "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m01:56:35.715526 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m01:56:35.718537 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: BEGIN
+[0m01:56:35.720416 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m01:56:35.722445 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m01:56:35.723954 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m01:56:35.725967 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.stg_alzheimer_patients"} */
+
+  
+  create view "alzheimers_analytics"."analytics"."stg_alzheimer_patients__dbt_tmp" as (
+    select
+    PatientID as patient_id,
+    Age as age,
+
+    Gender as gender_code,
+    GenderLabel as gender_label,
+
+    Ethnicity as ethnicity_code,
+    EthnicityLabel as ethnicity_label,
+
+    EducationLevel as education_level_code,
+    EducationLabel as education_label,
+
+    BMI as bmi,
+    Smoking as smoking,
+    AlcoholConsumption as alcohol_consumption,
+    PhysicalActivity as physical_activity,
+    DietQuality as diet_quality,
+    SleepQuality as sleep_quality,
+
+    FamilyHistoryAlzheimers as family_history_alzheimers,
+    CardiovascularDisease as cardiovascular_disease,
+    Diabetes as diabetes,
+    Depression as depression,
+    HeadInjury as head_injury,
+    Hypertension as hypertension,
+
+    SystolicBP as systolic_bp,
+    DiastolicBP as diastolic_bp,
+
+    CholesterolTotal as cholesterol_total,
+    CholesterolLDL as cholesterol_ldl,
+    CholesterolHDL as cholesterol_hdl,
+    CholesterolTriglycerides as cholesterol_triglycerides,
+
+    MMSE as mmse,
+    MMSEBand as mmse_band,
+
+    FunctionalAssessment as functional_assessment,
+    FunctionalAssessmentBand as functional_assessment_band,
+
+    ADL as adl,
+    ADLBand as adl_band,
+
+    MemoryComplaints as memory_complaints,
+    BehavioralProblems as behavioral_problems,
+    Confusion as confusion,
+    Disorientation as disorientation,
+    PersonalityChanges as personality_changes,
+    DifficultyCompletingTasks as difficulty_completing_tasks,
+    Forgetfulness as forgetfulness,
+
+    Diagnosis as diagnosis_code,
+    DiagnosisLabel as diagnosis_label,
+
+    AgeGroup as age_group,
+    MedicalHistoryCount as medical_history_count,
+    SymptomCount as symptom_count,
+
+    cast(ProcessingTimestampUTC as timestamptz)
+        as processing_timestamp_utc,
+
+    SourceFileName as source_file_name
+
+from "alzheimers_analytics"."main"."silver_alzheimer_patients"
+  );
+
+[0m01:56:35.733044 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m01:56:35.754715 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m01:56:35.756718 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.stg_alzheimer_patients"} */
+alter view "alzheimers_analytics"."analytics"."stg_alzheimer_patients__dbt_tmp" rename to "stg_alzheimer_patients"
+[0m01:56:35.760728 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m01:56:35.808544 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: COMMIT
+[0m01:56:35.810097 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m01:56:35.812109 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: COMMIT
+[0m01:56:35.819631 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m01:56:35.836683 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m01:56:35.838687 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.stg_alzheimer_patients"} */
+
+      drop view if exists "alzheimers_analytics"."analytics"."stg_alzheimer_patients__dbt_backup" cascade
+    
+[0m01:56:35.841693 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m01:56:35.850771 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: Close
+[0m01:56:35.858317 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f99cce0d-ff87-430b-bde6-cece361d3c53', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A1A82600>]}
+[0m01:56:35.860307 [info ] [Thread-1 (]: 1 of 11 OK created sql view model analytics.stg_alzheimer_patients ............. [[32mOK[0m in 0.34s]
+[0m01:56:35.865878 [debug] [Thread-1 (]: Finished running node model.alzheimers_analytics.stg_alzheimer_patients
+[0m01:56:35.868893 [debug] [Thread-3 (]: Began running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0
+[0m01:56:35.870892 [debug] [Thread-4 (]: Began running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741
+[0m01:56:35.871901 [debug] [Thread-2 (]: Began running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f
+[0m01:56:35.876427 [debug] [Thread-1 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1
+[0m01:56:35.874425 [info ] [Thread-3 (]: 2 of 11 START test accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90  [RUN]
+[0m01:56:35.877947 [info ] [Thread-4 (]: 3 of 11 START test accepted_values_stg_alzheimer_patients_diagnosis_code__0__1 . [RUN]
+[0m01:56:35.885520 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0'
+[0m01:56:35.890512 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741'
+[0m01:56:35.892021 [debug] [Thread-3 (]: Began compiling node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0
+[0m01:56:35.894596 [debug] [Thread-4 (]: Began compiling node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741
+[0m01:56:35.879967 [info ] [Thread-2 (]: 4 of 11 START test accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed  [RUN]
+[0m01:56:35.882494 [info ] [Thread-1 (]: 5 of 11 START test not_null_stg_alzheimer_patients_age ......................... [RUN]
+[0m01:56:36.011679 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f'
+[0m01:56:36.070521 [debug] [Thread-3 (]: Writing injected SQL for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"
+[0m01:56:36.073522 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.alzheimers_analytics.stg_alzheimer_patients, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1)
+[0m01:56:36.078512 [debug] [Thread-4 (]: Writing injected SQL for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"
+[0m01:56:36.079511 [debug] [Thread-2 (]: Began compiling node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f
+[0m01:56:36.081516 [debug] [Thread-1 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1
+[0m01:56:36.141673 [debug] [Thread-3 (]: Began executing node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0
+[0m01:56:36.202709 [debug] [Thread-4 (]: Began executing node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741
+[0m01:56:36.208780 [debug] [Thread-1 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"
+[0m01:56:36.272886 [debug] [Thread-2 (]: Writing injected SQL for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"
+[0m01:56:36.355881 [debug] [Thread-4 (]: Writing runtime sql for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"
+[0m01:56:36.361786 [debug] [Thread-3 (]: Writing runtime sql for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"
+[0m01:56:36.365325 [debug] [Thread-1 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1
+[0m01:56:36.374400 [debug] [Thread-2 (]: Began executing node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f
+[0m01:56:36.383426 [debug] [Thread-2 (]: Writing runtime sql for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"
+[0m01:56:36.372889 [debug] [Thread-1 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"
+[0m01:56:36.386946 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"
+[0m01:56:36.388953 [debug] [Thread-3 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0: BEGIN
+[0m01:56:36.389946 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m01:56:36.393011 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"
+[0m01:56:36.394522 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1: BEGIN
+[0m01:56:36.396535 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m01:56:36.400544 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"
+[0m01:56:36.402543 [debug] [Thread-2 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f: BEGIN
+[0m01:56:36.403541 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"
+[0m01:56:36.406065 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m01:56:36.408072 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m01:56:36.409064 [debug] [Thread-3 (]: SQL status: OK in 0.019 seconds
+[0m01:56:36.411068 [debug] [Thread-4 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741: BEGIN
+[0m01:56:36.413583 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"
+[0m01:56:36.415597 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"
+[0m01:56:36.417597 [debug] [Thread-2 (]: SQL status: OK in 0.012 seconds
+[0m01:56:36.419597 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m01:56:36.421596 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select age
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where age is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:36.423596 [debug] [Thread-3 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        age_group as value_field,
+        count(*) as n_records
+
+    from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    group by age_group
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '60-69','70-79','80-90'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:36.426140 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"
+[0m01:56:36.430140 [debug] [Thread-2 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        diagnosis_label as value_field,
+        count(*) as n_records
+
+    from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    group by diagnosis_label
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Diagnosed','Not Diagnosed'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:36.428139 [debug] [Thread-4 (]: SQL status: OK in 0.009 seconds
+[0m01:56:36.433512 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m01:56:36.435527 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"
+[0m01:56:36.446287 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1: ROLLBACK
+[0m01:56:36.449288 [debug] [Thread-4 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        diagnosis_code as value_field,
+        count(*) as n_records
+
+    from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    group by diagnosis_code
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:36.450287 [debug] [Thread-3 (]: SQL status: OK in 0.021 seconds
+[0m01:56:36.452287 [debug] [Thread-2 (]: SQL status: OK in 0.020 seconds
+[0m01:56:36.456814 [debug] [Thread-1 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1'
+[0m01:56:36.461897 [debug] [Thread-3 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0: ROLLBACK
+[0m01:56:36.463913 [debug] [Thread-4 (]: SQL status: OK in 0.010 seconds
+[0m01:56:36.469406 [debug] [Thread-2 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f: ROLLBACK
+[0m01:56:36.471427 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1: Close
+[0m01:56:36.475949 [debug] [Thread-3 (]: Failed to rollback 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0'
+[0m01:56:36.481003 [debug] [Thread-4 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741: ROLLBACK
+[0m01:56:36.485004 [debug] [Thread-2 (]: Failed to rollback 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f'
+[0m01:56:36.488999 [debug] [Thread-3 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0: Close
+[0m01:56:36.487003 [info ] [Thread-1 (]: 5 of 11 PASS not_null_stg_alzheimer_patients_age ............................... [[32mPASS[0m in 0.41s]
+[0m01:56:36.490000 [debug] [Thread-2 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f: Close
+[0m01:56:36.494065 [debug] [Thread-4 (]: Failed to rollback 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741'
+[0m01:56:36.501152 [debug] [Thread-1 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1
+[0m01:56:36.496073 [info ] [Thread-3 (]: 2 of 11 PASS accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90  [[32mPASS[0m in 0.61s]
+[0m01:56:36.504141 [debug] [Thread-4 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741: Close
+[0m01:56:36.507143 [info ] [Thread-2 (]: 4 of 11 PASS accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed  [[32mPASS[0m in 0.50s]
+[0m01:56:36.509140 [debug] [Thread-1 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762
+[0m01:56:36.511141 [debug] [Thread-3 (]: Finished running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0
+[0m01:56:36.518974 [debug] [Thread-2 (]: Finished running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f
+[0m01:56:36.522622 [debug] [Thread-3 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6
+[0m01:56:36.524475 [debug] [Thread-2 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3
+[0m01:56:36.514675 [info ] [Thread-4 (]: 3 of 11 PASS accepted_values_stg_alzheimer_patients_diagnosis_code__0__1 ....... [[32mPASS[0m in 0.63s]
+[0m01:56:36.530663 [debug] [Thread-4 (]: Finished running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741
+[0m01:56:36.520740 [info ] [Thread-1 (]: 6 of 11 START test not_null_stg_alzheimer_patients_age_group ................... [RUN]
+[0m01:56:36.533663 [debug] [Thread-4 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e
+[0m01:56:36.525649 [info ] [Thread-3 (]: 7 of 11 START test not_null_stg_alzheimer_patients_diagnosis_code .............. [RUN]
+[0m01:56:36.539729 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6)
+[0m01:56:36.541754 [debug] [Thread-3 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6
+[0m01:56:36.536185 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762)
+[0m01:56:36.592138 [debug] [Thread-1 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762
+[0m01:56:36.528663 [info ] [Thread-2 (]: 8 of 11 START test not_null_stg_alzheimer_patients_diagnosis_label ............. [RUN]
+[0m01:56:36.601261 [debug] [Thread-3 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"
+[0m01:56:36.538191 [info ] [Thread-4 (]: 9 of 11 START test not_null_stg_alzheimer_patients_patient_id .................. [RUN]
+[0m01:56:36.646174 [debug] [Thread-1 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"
+[0m01:56:36.648174 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3)
+[0m01:56:36.652215 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e)
+[0m01:56:36.657229 [debug] [Thread-3 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6
+[0m01:56:36.658227 [debug] [Thread-2 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3
+[0m01:56:36.662834 [debug] [Thread-4 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e
+[0m01:56:36.670398 [debug] [Thread-3 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"
+[0m01:56:36.727326 [debug] [Thread-4 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"
+[0m01:56:36.729326 [debug] [Thread-1 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762
+[0m01:56:36.714739 [debug] [Thread-2 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"
+[0m01:56:36.737403 [debug] [Thread-1 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"
+[0m01:56:36.740427 [debug] [Thread-4 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e
+[0m01:56:36.742949 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"
+[0m01:56:36.750578 [debug] [Thread-4 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"
+[0m01:56:36.752092 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6: BEGIN
+[0m01:56:36.754669 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m01:56:36.755672 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m01:56:36.758225 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"
+[0m01:56:36.759756 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select diagnosis_code
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where diagnosis_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:36.761270 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"
+[0m01:56:36.763795 [debug] [Thread-2 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3
+[0m01:56:36.765793 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e: BEGIN
+[0m01:56:36.773378 [debug] [Thread-2 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"
+[0m01:56:36.775907 [debug] [Thread-3 (]: SQL status: OK in 0.015 seconds
+[0m01:56:36.778433 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m01:56:36.780962 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"
+[0m01:56:36.785867 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762: BEGIN
+[0m01:56:36.791244 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6: ROLLBACK
+[0m01:56:36.792314 [debug] [Thread-4 (]: SQL status: OK in 0.014 seconds
+[0m01:56:36.798878 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"
+[0m01:56:36.799863 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m01:56:36.801864 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"
+[0m01:56:36.805902 [debug] [Thread-3 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6'
+[0m01:56:36.807413 [debug] [Thread-2 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3: BEGIN
+[0m01:56:36.810066 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select patient_id
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where patient_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:36.817145 [debug] [Thread-1 (]: SQL status: OK in 0.016 seconds
+[0m01:56:36.819156 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6: Close
+[0m01:56:36.820156 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m01:56:36.823157 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"
+[0m01:56:36.828256 [debug] [Thread-4 (]: SQL status: OK in 0.006 seconds
+[0m01:56:36.832827 [debug] [Thread-2 (]: SQL status: OK in 0.012 seconds
+[0m01:56:36.836380 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select age_group
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where age_group is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:36.842367 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e: ROLLBACK
+[0m01:56:36.844403 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"
+[0m01:56:36.824674 [info ] [Thread-3 (]: 7 of 11 PASS not_null_stg_alzheimer_patients_diagnosis_code .................... [[32mPASS[0m in 0.28s]
+[0m01:56:36.846928 [debug] [Thread-2 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select diagnosis_label
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where diagnosis_label is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:36.851007 [debug] [Thread-4 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e'
+[0m01:56:36.853532 [debug] [Thread-3 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6
+[0m01:56:36.855039 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m01:56:36.859054 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e: Close
+[0m01:56:36.861073 [debug] [Thread-3 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b
+[0m01:56:36.880319 [debug] [Thread-2 (]: SQL status: OK in 0.024 seconds
+[0m01:56:36.889920 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762: ROLLBACK
+[0m01:56:36.895462 [debug] [Thread-1 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762'
+[0m01:56:36.908041 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762: Close
+[0m01:56:36.912567 [debug] [Thread-2 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3: ROLLBACK
+[0m01:56:36.878315 [info ] [Thread-4 (]: 9 of 11 PASS not_null_stg_alzheimer_patients_patient_id ........................ [[32mPASS[0m in 0.22s]
+[0m01:56:36.923697 [debug] [Thread-4 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e
+[0m01:56:36.926758 [debug] [Thread-4 (]: Began running node test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac
+[0m01:56:36.890922 [info ] [Thread-3 (]: 10 of 11 START test not_null_stg_alzheimer_patients_processing_timestamp_utc ... [RUN]
+[0m01:56:36.934237 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b)
+[0m01:56:36.936344 [debug] [Thread-3 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b
+[0m01:56:36.929756 [info ] [Thread-4 (]: 11 of 11 START test unique_stg_alzheimer_patients_patient_id ................... [RUN]
+[0m01:56:36.964169 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e, now test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac)
+[0m01:56:36.971706 [debug] [Thread-3 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"
+[0m01:56:36.973714 [debug] [Thread-4 (]: Began compiling node test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac
+[0m01:56:36.976710 [debug] [Thread-2 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3'
+[0m01:56:37.019655 [debug] [Thread-4 (]: Writing injected SQL for node "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"
+[0m01:56:37.021653 [debug] [Thread-2 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3: Close
+[0m01:56:36.981376 [info ] [Thread-1 (]: 6 of 11 PASS not_null_stg_alzheimer_patients_age_group ......................... [[32mPASS[0m in 0.44s]
+[0m01:56:37.024734 [debug] [Thread-3 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b
+[0m01:56:37.029757 [debug] [Thread-1 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762
+[0m01:56:37.027750 [info ] [Thread-2 (]: 8 of 11 PASS not_null_stg_alzheimer_patients_diagnosis_label ................... [[32mPASS[0m in 0.38s]
+[0m01:56:37.036796 [debug] [Thread-3 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"
+[0m01:56:37.040337 [debug] [Thread-2 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3
+[0m01:56:37.042338 [debug] [Thread-4 (]: Began executing node test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac
+[0m01:56:37.051107 [debug] [Thread-4 (]: Writing runtime sql for node "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"
+[0m01:56:37.054630 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"
+[0m01:56:37.058667 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"
+[0m01:56:37.065265 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b: BEGIN
+[0m01:56:37.070263 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m01:56:37.072789 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m01:56:37.073803 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"
+[0m01:56:37.068277 [debug] [Thread-4 (]: On test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac: BEGIN
+[0m01:56:37.077334 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select processing_timestamp_utc
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where processing_timestamp_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:37.079335 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m01:56:37.082890 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m01:56:37.083860 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"
+[0m01:56:37.085861 [debug] [Thread-4 (]: On test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    patient_id as unique_field,
+    count(*) as n_records
+
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where patient_id is not null
+group by patient_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m01:56:37.087879 [debug] [Thread-3 (]: SQL status: OK in 0.006 seconds
+[0m01:56:37.097451 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b: ROLLBACK
+[0m01:56:37.106159 [debug] [Thread-3 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b'
+[0m01:56:37.107174 [debug] [Thread-4 (]: SQL status: OK in 0.020 seconds
+[0m01:56:37.109183 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b: Close
+[0m01:56:37.115731 [debug] [Thread-4 (]: On test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac: ROLLBACK
+[0m01:56:37.121934 [debug] [Thread-4 (]: Failed to rollback 'test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac'
+[0m01:56:37.117739 [info ] [Thread-3 (]: 10 of 11 PASS not_null_stg_alzheimer_patients_processing_timestamp_utc ......... [[32mPASS[0m in 0.18s]
+[0m01:56:37.123949 [debug] [Thread-4 (]: On test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac: Close
+[0m01:56:37.126462 [debug] [Thread-3 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b
+[0m01:56:37.128546 [info ] [Thread-4 (]: 11 of 11 PASS unique_stg_alzheimer_patients_patient_id ......................... [[32mPASS[0m in 0.17s]
+[0m01:56:37.134657 [debug] [Thread-4 (]: Finished running node test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac
+[0m01:56:37.139303 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:56:37.141328 [debug] [MainThread]: On master: BEGIN
+[0m01:56:37.143303 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:56:37.147378 [debug] [MainThread]: SQL status: OK in 0.005 seconds
+[0m01:56:37.149406 [debug] [MainThread]: On master: COMMIT
+[0m01:56:37.151396 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:56:37.153229 [debug] [MainThread]: On master: COMMIT
+[0m01:56:37.155240 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m01:56:37.158242 [debug] [MainThread]: On master: Close
+[0m01:56:37.160240 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:56:37.161241 [debug] [MainThread]: Connection 'create_alzheimers_analytics_analytics' was properly closed.
+[0m01:56:37.162241 [debug] [MainThread]: Connection 'list_alzheimers_analytics_analytics' was properly closed.
+[0m01:56:37.164793 [debug] [MainThread]: Connection 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762' was properly closed.
+[0m01:56:37.165792 [debug] [MainThread]: Connection 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b' was properly closed.
+[0m01:56:37.168315 [debug] [MainThread]: Connection 'test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac' was properly closed.
+[0m01:56:37.168826 [debug] [MainThread]: Connection 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3' was properly closed.
+[0m01:56:37.172352 [info ] [MainThread]: 
+[0m01:56:37.175018 [info ] [MainThread]: Finished running 10 data tests, 1 view model in 0 hours 0 minutes and 2.47 seconds (2.47s).
+[0m01:56:37.187956 [debug] [MainThread]: Command end result
+[0m01:56:37.395877 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m01:56:37.410539 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m01:56:37.431185 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m01:56:37.465070 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt_project\target\run_results.json
+[0m01:56:37.466069 [info ] [MainThread]: 
+[0m01:56:37.469070 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:56:37.470581 [info ] [MainThread]: 
+[0m01:56:37.472595 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=11
+[0m01:56:37.476600 [debug] [MainThread]: Command `dbt build` succeeded at 01:56:37.475598 after 7.25 seconds
+[0m01:56:37.484176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599F90EED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599F339700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001599F339EB0>]}
+[0m01:56:37.486200 [debug] [MainThread]: Flushing usage events
+[0m01:56:39.345429 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:00:17.879980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B3014DD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B2EFC2810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B30182E10>]}
+
+
+============================== 02:00:17.889001 | 03cc5bd4-0133-4aec-9954-e7370aab2047 ==============================
+[0m02:00:17.889001 [info ] [MainThread]: Running with dbt=1.12.0
+[0m02:00:17.891005 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt ls --project-dir dbt_project --profiles-dir dbt_project --select path:models/marts', 'log_path': 'dbt_project\\logs'}
+[0m02:00:18.964847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '03cc5bd4-0133-4aec-9954-e7370aab2047', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B34357890>]}
+[0m02:00:19.216135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '03cc5bd4-0133-4aec-9954-e7370aab2047', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B34283710>]}
+[0m02:00:19.228680 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m02:00:20.270391 [debug] [MainThread]: checksum: 5c4034932e428399a5d725711ec71ca090a03185d39b7ded05a71e18c8a10a58, vars: {}, profile: alzheimers_analytics, target: dev, version: 1.12.0
+[0m02:00:20.913507 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 0 files changed.
+[0m02:00:20.916542 [debug] [MainThread]: Partial parsing: added file: alzheimers_analytics://models\marts\dim_diagnosis.sql
+[0m02:00:20.918558 [debug] [MainThread]: Partial parsing: added file: alzheimers_analytics://models\marts\dim_patient.sql
+[0m02:00:20.919556 [debug] [MainThread]: Partial parsing: added file: alzheimers_analytics://models\marts\fct_patient_assessment.sql
+[0m02:00:22.315320 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.alzheimers_analytics.intermediate
+[0m02:00:22.328039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '03cc5bd4-0133-4aec-9954-e7370aab2047', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B2FB845F0>]}
+[0m02:00:22.638168 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m02:00:22.644686 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m02:00:22.706293 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m02:00:22.765235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '03cc5bd4-0133-4aec-9954-e7370aab2047', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B3464B230>]}
+[0m02:00:22.766233 [info ] [MainThread]: Found 15 data tests, 4 models, 1 source, 486 macros
+[0m02:00:22.767232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '03cc5bd4-0133-4aec-9954-e7370aab2047', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B3469DCD0>]}
+[0m02:00:22.770232 [info ] [MainThread]: alzheimers_analytics.marts.dim_diagnosis
+[0m02:00:22.771231 [info ] [MainThread]: alzheimers_analytics.marts.dim_patient
+[0m02:00:22.772240 [info ] [MainThread]: alzheimers_analytics.marts.fct_patient_assessment
+[0m02:00:22.774245 [debug] [MainThread]: Command `dbt ls` succeeded at 02:00:22.774245 after 5.60 seconds
+[0m02:00:22.775242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B3014DD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B32026DE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B322C2000>]}
+[0m02:00:22.775242 [debug] [MainThread]: Flushing usage events
+[0m02:00:24.360457 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:00:38.649734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C247F57F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C27152FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C27E02FF0>]}
+
+
+============================== 02:00:38.667937 | 2f2628c6-0337-4764-a2a9-27cd87edc30d ==============================
+[0m02:00:38.667937 [info ] [MainThread]: Running with dbt=1.12.0
+[0m02:00:38.676003 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt build --project-dir dbt_project --profiles-dir dbt_project --select stg_alzheimer_patients+', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt_project\\logs'}
+[0m02:00:39.830217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C2771E8D0>]}
+[0m02:00:40.117113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C2795D670>]}
+[0m02:00:40.154890 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m02:00:41.210896 [debug] [MainThread]: checksum: 5c4034932e428399a5d725711ec71ca090a03185d39b7ded05a71e18c8a10a58, vars: {}, profile: alzheimers_analytics, target: dev, version: 1.12.0
+[0m02:00:41.963272 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:00:41.965272 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m02:00:41.966275 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:00:41.999552 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.alzheimers_analytics.intermediate
+[0m02:00:42.039814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C29A05E50>]}
+[0m02:00:42.664955 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m02:00:42.677023 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m02:00:42.771441 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m02:00:42.866014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C2A2DCEF0>]}
+[0m02:00:42.868018 [info ] [MainThread]: Found 15 data tests, 4 models, 1 source, 486 macros
+[0m02:00:42.879592 [info ] [MainThread]: 
+[0m02:00:42.880585 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m02:00:42.882586 [info ] [MainThread]: 
+[0m02:00:42.884593 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m02:00:42.906242 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_alzheimers_analytics'
+[0m02:00:43.353490 [debug] [ThreadPool]: Using duckdb connection "list_alzheimers_analytics"
+[0m02:00:43.355492 [debug] [ThreadPool]: On list_alzheimers_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "list_alzheimers_analytics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"alzheimers_analytics"'
+    
+  
+  
+[0m02:00:43.356494 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:00:43.401985 [debug] [ThreadPool]: SQL status: OK in 0.045 seconds
+[0m02:00:43.409504 [debug] [ThreadPool]: On list_alzheimers_analytics: Close
+[0m02:00:43.412037 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_alzheimers_analytics, now create_alzheimers_analytics_analytics)
+[0m02:00:43.414037 [debug] [ThreadPool]: Creating schema "database: "alzheimers_analytics"
+schema: "analytics"
+"
+[0m02:00:43.436999 [debug] [ThreadPool]: Using duckdb connection "create_alzheimers_analytics_analytics"
+[0m02:00:43.438685 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "create_alzheimers_analytics_analytics"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='alzheimers_analytics'
+        and type='sqlite'
+    
+  
+[0m02:00:43.439687 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:00:43.442221 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m02:00:43.446762 [debug] [ThreadPool]: Using duckdb connection "create_alzheimers_analytics_analytics"
+[0m02:00:43.449292 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: BEGIN
+[0m02:00:43.451291 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m02:00:43.452297 [debug] [ThreadPool]: Using duckdb connection "create_alzheimers_analytics_analytics"
+[0m02:00:43.453815 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "create_alzheimers_analytics_analytics"} */
+
+    
+    
+        create schema if not exists "alzheimers_analytics"."analytics"
+    
+[0m02:00:43.454835 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m02:00:43.456836 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: COMMIT
+[0m02:00:43.457834 [debug] [ThreadPool]: Using duckdb connection "create_alzheimers_analytics_analytics"
+[0m02:00:43.458836 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: COMMIT
+[0m02:00:43.459837 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m02:00:43.460837 [debug] [ThreadPool]: On create_alzheimers_analytics_analytics: Close
+[0m02:00:43.464833 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_alzheimers_analytics_analytics'
+[0m02:00:43.478927 [debug] [ThreadPool]: Using duckdb connection "list_alzheimers_analytics_analytics"
+[0m02:00:43.479928 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: BEGIN
+[0m02:00:43.481929 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:00:43.483940 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m02:00:43.484938 [debug] [ThreadPool]: Using duckdb connection "list_alzheimers_analytics_analytics"
+[0m02:00:43.485939 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "connection_name": "list_alzheimers_analytics_analytics"} */
+select
+      'alzheimers_analytics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'analytics'
+    and lower(table_catalog) = 'alzheimers_analytics'
+  
+[0m02:00:43.609452 [debug] [ThreadPool]: SQL status: OK in 0.121 seconds
+[0m02:00:43.612975 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: ROLLBACK
+[0m02:00:43.618012 [debug] [ThreadPool]: Failed to rollback 'list_alzheimers_analytics_analytics'
+[0m02:00:43.619035 [debug] [ThreadPool]: On list_alzheimers_analytics_analytics: Close
+[0m02:00:43.624584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C2A4ADDC0>]}
+[0m02:00:43.625582 [debug] [MainThread]: Using duckdb connection "master"
+[0m02:00:43.627569 [debug] [MainThread]: On master: BEGIN
+[0m02:00:43.628580 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:00:43.631078 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m02:00:43.632091 [debug] [MainThread]: On master: COMMIT
+[0m02:00:43.634091 [debug] [MainThread]: Using duckdb connection "master"
+[0m02:00:43.635091 [debug] [MainThread]: On master: COMMIT
+[0m02:00:43.637621 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m02:00:43.639498 [debug] [MainThread]: On master: Close
+[0m02:00:43.652548 [debug] [Thread-1 (]: Began running node model.alzheimers_analytics.stg_alzheimer_patients
+[0m02:00:43.654594 [info ] [Thread-1 (]: 1 of 14 START sql view model analytics.stg_alzheimer_patients .................. [RUN]
+[0m02:00:43.657606 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.alzheimers_analytics.stg_alzheimer_patients'
+[0m02:00:43.659616 [debug] [Thread-1 (]: Began compiling node model.alzheimers_analytics.stg_alzheimer_patients
+[0m02:00:43.693931 [debug] [Thread-1 (]: Writing injected SQL for node "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m02:00:43.700924 [debug] [Thread-1 (]: Began executing node model.alzheimers_analytics.stg_alzheimer_patients
+[0m02:00:43.842820 [debug] [Thread-1 (]: Writing runtime sql for node "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m02:00:43.847833 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m02:00:43.849834 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: BEGIN
+[0m02:00:43.852877 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m02:00:43.855901 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m02:00:43.857898 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m02:00:43.860420 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.stg_alzheimer_patients"} */
+
+  
+  create view "alzheimers_analytics"."analytics"."stg_alzheimer_patients__dbt_tmp" as (
+    select
+    PatientID as patient_id,
+    Age as age,
+
+    Gender as gender_code,
+    GenderLabel as gender_label,
+
+    Ethnicity as ethnicity_code,
+    EthnicityLabel as ethnicity_label,
+
+    EducationLevel as education_level_code,
+    EducationLabel as education_label,
+
+    BMI as bmi,
+    Smoking as smoking,
+    AlcoholConsumption as alcohol_consumption,
+    PhysicalActivity as physical_activity,
+    DietQuality as diet_quality,
+    SleepQuality as sleep_quality,
+
+    FamilyHistoryAlzheimers as family_history_alzheimers,
+    CardiovascularDisease as cardiovascular_disease,
+    Diabetes as diabetes,
+    Depression as depression,
+    HeadInjury as head_injury,
+    Hypertension as hypertension,
+
+    SystolicBP as systolic_bp,
+    DiastolicBP as diastolic_bp,
+
+    CholesterolTotal as cholesterol_total,
+    CholesterolLDL as cholesterol_ldl,
+    CholesterolHDL as cholesterol_hdl,
+    CholesterolTriglycerides as cholesterol_triglycerides,
+
+    MMSE as mmse,
+    MMSEBand as mmse_band,
+
+    FunctionalAssessment as functional_assessment,
+    FunctionalAssessmentBand as functional_assessment_band,
+
+    ADL as adl,
+    ADLBand as adl_band,
+
+    MemoryComplaints as memory_complaints,
+    BehavioralProblems as behavioral_problems,
+    Confusion as confusion,
+    Disorientation as disorientation,
+    PersonalityChanges as personality_changes,
+    DifficultyCompletingTasks as difficulty_completing_tasks,
+    Forgetfulness as forgetfulness,
+
+    Diagnosis as diagnosis_code,
+    DiagnosisLabel as diagnosis_label,
+
+    AgeGroup as age_group,
+    MedicalHistoryCount as medical_history_count,
+    SymptomCount as symptom_count,
+
+    cast(ProcessingTimestampUTC as timestamptz)
+        as processing_timestamp_utc,
+
+    SourceFileName as source_file_name
+
+from "alzheimers_analytics"."main"."silver_alzheimer_patients"
+  );
+
+[0m02:00:43.864432 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m02:00:43.887706 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m02:00:43.889705 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.stg_alzheimer_patients"} */
+alter view "alzheimers_analytics"."analytics"."stg_alzheimer_patients" rename to "stg_alzheimer_patients__dbt_backup"
+[0m02:00:43.893243 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m02:00:43.903771 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m02:00:43.905755 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.stg_alzheimer_patients"} */
+alter view "alzheimers_analytics"."analytics"."stg_alzheimer_patients__dbt_tmp" rename to "stg_alzheimer_patients"
+[0m02:00:43.908276 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m02:00:43.965721 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: COMMIT
+[0m02:00:43.967713 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m02:00:43.969709 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: COMMIT
+[0m02:00:43.975237 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m02:00:43.994175 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.stg_alzheimer_patients"
+[0m02:00:43.996188 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.stg_alzheimer_patients"} */
+
+      drop view if exists "alzheimers_analytics"."analytics"."stg_alzheimer_patients__dbt_backup" cascade
+    
+[0m02:00:43.999700 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m02:00:44.006221 [debug] [Thread-1 (]: On model.alzheimers_analytics.stg_alzheimer_patients: Close
+[0m02:00:44.012778 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C2A5F4680>]}
+[0m02:00:44.014775 [info ] [Thread-1 (]: 1 of 14 OK created sql view model analytics.stg_alzheimer_patients ............. [[32mOK[0m in 0.35s]
+[0m02:00:44.016775 [debug] [Thread-1 (]: Finished running node model.alzheimers_analytics.stg_alzheimer_patients
+[0m02:00:44.020298 [debug] [Thread-3 (]: Began running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0
+[0m02:00:44.021304 [debug] [Thread-4 (]: Began running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741
+[0m02:00:44.024808 [debug] [Thread-2 (]: Began running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f
+[0m02:00:44.026817 [debug] [Thread-1 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1
+[0m02:00:44.023298 [info ] [Thread-3 (]: 2 of 14 START test accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90  [RUN]
+[0m02:00:44.029348 [info ] [Thread-4 (]: 3 of 14 START test accepted_values_stg_alzheimer_patients_diagnosis_code__0__1 . [RUN]
+[0m02:00:44.031346 [info ] [Thread-2 (]: 4 of 14 START test accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed  [RUN]
+[0m02:00:44.032349 [info ] [Thread-1 (]: 5 of 14 START test not_null_stg_alzheimer_patients_age ......................... [RUN]
+[0m02:00:44.035348 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0'
+[0m02:00:44.036863 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741'
+[0m02:00:44.052277 [debug] [Thread-4 (]: Began compiling node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741
+[0m02:00:44.038484 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f'
+[0m02:00:44.049258 [debug] [Thread-3 (]: Began compiling node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0
+[0m02:00:44.043040 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.alzheimers_analytics.stg_alzheimer_patients, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1)
+[0m02:00:44.179091 [debug] [Thread-1 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1
+[0m02:00:44.130226 [debug] [Thread-4 (]: Writing injected SQL for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"
+[0m02:00:44.098411 [debug] [Thread-2 (]: Began compiling node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f
+[0m02:00:44.279238 [debug] [Thread-3 (]: Writing injected SQL for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"
+[0m02:00:44.351866 [debug] [Thread-4 (]: Began executing node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741
+[0m02:00:44.362381 [debug] [Thread-1 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"
+[0m02:00:44.395719 [debug] [Thread-3 (]: Began executing node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0
+[0m02:00:44.481748 [debug] [Thread-4 (]: Writing runtime sql for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"
+[0m02:00:44.501444 [debug] [Thread-3 (]: Writing runtime sql for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"
+[0m02:00:44.506492 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"
+[0m02:00:44.509019 [debug] [Thread-2 (]: Writing injected SQL for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"
+[0m02:00:44.511574 [debug] [Thread-4 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741: BEGIN
+[0m02:00:44.522174 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m02:00:44.515101 [debug] [Thread-1 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1
+[0m02:00:44.539326 [debug] [Thread-2 (]: Began executing node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f
+[0m02:00:44.541337 [debug] [Thread-4 (]: SQL status: OK in 0.019 seconds
+[0m02:00:44.578710 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"
+[0m02:00:44.545854 [debug] [Thread-1 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"
+[0m02:00:44.544338 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"
+[0m02:00:44.584265 [debug] [Thread-4 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        diagnosis_code as value_field,
+        count(*) as n_records
+
+    from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    group by diagnosis_code
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:44.587254 [debug] [Thread-3 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0: BEGIN
+[0m02:00:44.564039 [debug] [Thread-2 (]: Writing runtime sql for node "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"
+[0m02:00:44.591778 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"
+[0m02:00:44.596289 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m02:00:44.608913 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"
+[0m02:00:44.610916 [debug] [Thread-4 (]: SQL status: OK in 0.022 seconds
+[0m02:00:44.624041 [debug] [Thread-3 (]: SQL status: OK in 0.029 seconds
+[0m02:00:44.626567 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"
+[0m02:00:44.611911 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1: BEGIN
+[0m02:00:44.615436 [debug] [Thread-2 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f: BEGIN
+[0m02:00:44.628568 [debug] [Thread-3 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        age_group as value_field,
+        count(*) as n_records
+
+    from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    group by age_group
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '60-69','70-79','80-90'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:44.645222 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:00:44.644223 [debug] [Thread-4 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741: ROLLBACK
+[0m02:00:44.647736 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m02:00:44.652278 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m02:00:44.654275 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"
+[0m02:00:44.655792 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select age
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where age is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:44.661329 [debug] [Thread-4 (]: Failed to rollback 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741'
+[0m02:00:44.662857 [debug] [Thread-3 (]: SQL status: OK in 0.013 seconds
+[0m02:00:44.664368 [debug] [Thread-4 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741: Close
+[0m02:00:44.667913 [debug] [Thread-2 (]: SQL status: OK in 0.020 seconds
+[0m02:00:44.670436 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m02:00:44.673965 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"
+[0m02:00:44.678498 [debug] [Thread-3 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0: ROLLBACK
+[0m02:00:44.671949 [info ] [Thread-4 (]: 3 of 14 PASS accepted_values_stg_alzheimer_patients_diagnosis_code__0__1 ....... [[32mPASS[0m in 0.64s]
+[0m02:00:44.682031 [debug] [Thread-2 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        diagnosis_label as value_field,
+        count(*) as n_records
+
+    from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    group by diagnosis_label
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Diagnosed','Not Diagnosed'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:44.684029 [debug] [Thread-4 (]: Finished running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741
+[0m02:00:44.688062 [debug] [Thread-3 (]: Failed to rollback 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0'
+[0m02:00:44.693977 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1: ROLLBACK
+[0m02:00:44.696976 [debug] [Thread-4 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762
+[0m02:00:44.698490 [debug] [Thread-3 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0: Close
+[0m02:00:44.704040 [debug] [Thread-1 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1'
+[0m02:00:44.700504 [info ] [Thread-4 (]: 6 of 14 START test not_null_stg_alzheimer_patients_age_group ................... [RUN]
+[0m02:00:44.710624 [debug] [Thread-2 (]: SQL status: OK in 0.015 seconds
+[0m02:00:44.712615 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1: Close
+[0m02:00:44.714602 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_code__0__1.a58c6f9741, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762)
+[0m02:00:44.708590 [info ] [Thread-3 (]: 2 of 14 PASS accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90  [[32mPASS[0m in 0.67s]
+[0m02:00:44.733689 [debug] [Thread-2 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f: ROLLBACK
+[0m02:00:44.735688 [debug] [Thread-4 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762
+[0m02:00:44.731689 [info ] [Thread-1 (]: 5 of 14 PASS not_null_stg_alzheimer_patients_age ............................... [[32mPASS[0m in 0.69s]
+[0m02:00:44.743839 [debug] [Thread-3 (]: Finished running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0
+[0m02:00:44.752184 [debug] [Thread-2 (]: Failed to rollback 'test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f'
+[0m02:00:44.792458 [debug] [Thread-1 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1
+[0m02:00:44.796050 [debug] [Thread-4 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"
+[0m02:00:44.797664 [debug] [Thread-3 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6
+[0m02:00:44.800204 [debug] [Thread-2 (]: On test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f: Close
+[0m02:00:44.802730 [debug] [Thread-1 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3
+[0m02:00:44.811259 [debug] [Thread-4 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762
+[0m02:00:44.806258 [info ] [Thread-3 (]: 7 of 14 START test not_null_stg_alzheimer_patients_diagnosis_code .............. [RUN]
+[0m02:00:44.822872 [debug] [Thread-4 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"
+[0m02:00:44.809262 [info ] [Thread-2 (]: 4 of 14 PASS accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed  [[32mPASS[0m in 0.77s]
+[0m02:00:44.827870 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_age_group__60_69__70_79__80_90.a97a3f42d0, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6)
+[0m02:00:44.831397 [debug] [Thread-2 (]: Finished running node test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f
+[0m02:00:44.813787 [info ] [Thread-1 (]: 8 of 14 START test not_null_stg_alzheimer_patients_diagnosis_label ............. [RUN]
+[0m02:00:44.839014 [debug] [Thread-3 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6
+[0m02:00:44.842730 [debug] [Thread-2 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e
+[0m02:00:44.845742 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_age.ae2e68d5c1, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3)
+[0m02:00:44.865446 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"
+[0m02:00:44.881888 [debug] [Thread-3 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"
+[0m02:00:44.884898 [debug] [Thread-1 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3
+[0m02:00:44.883888 [info ] [Thread-2 (]: 9 of 14 START test not_null_stg_alzheimer_patients_patient_id .................. [RUN]
+[0m02:00:44.887429 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762: BEGIN
+[0m02:00:44.918438 [debug] [Thread-1 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"
+[0m02:00:44.920456 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.accepted_values_stg_alzheimer_patients_diagnosis_label__Diagnosed__Not_Diagnosed.10e84c5f8f, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e)
+[0m02:00:44.921449 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:00:44.923457 [debug] [Thread-3 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6
+[0m02:00:44.925451 [debug] [Thread-2 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e
+[0m02:00:44.934645 [debug] [Thread-3 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"
+[0m02:00:44.943154 [debug] [Thread-4 (]: SQL status: OK in 0.021 seconds
+[0m02:00:44.959239 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"
+[0m02:00:44.960240 [debug] [Thread-1 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3
+[0m02:00:44.957238 [debug] [Thread-2 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"
+[0m02:00:44.963277 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select age_group
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where age_group is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:44.969330 [debug] [Thread-1 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"
+[0m02:00:44.973330 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"
+[0m02:00:44.975330 [debug] [Thread-2 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e
+[0m02:00:44.976328 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6: BEGIN
+[0m02:00:44.983371 [debug] [Thread-2 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"
+[0m02:00:44.986421 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"
+[0m02:00:44.987436 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:00:44.988433 [debug] [Thread-4 (]: SQL status: OK in 0.018 seconds
+[0m02:00:44.991961 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3: BEGIN
+[0m02:00:44.993961 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:00:44.999959 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762: ROLLBACK
+[0m02:00:45.001511 [debug] [Thread-3 (]: SQL status: OK in 0.014 seconds
+[0m02:00:45.003060 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"
+[0m02:00:45.005590 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select diagnosis_code
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where diagnosis_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:45.010104 [debug] [Thread-4 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762'
+[0m02:00:45.012119 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"
+[0m02:00:45.014119 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762: Close
+[0m02:00:45.016120 [debug] [Thread-1 (]: SQL status: OK in 0.022 seconds
+[0m02:00:45.017636 [debug] [Thread-2 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e: BEGIN
+[0m02:00:45.019166 [debug] [Thread-3 (]: SQL status: OK in 0.012 seconds
+[0m02:00:45.023022 [debug] [Thread-1 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"
+[0m02:00:45.021995 [info ] [Thread-4 (]: 6 of 14 PASS not_null_stg_alzheimer_patients_age_group ......................... [[32mPASS[0m in 0.31s]
+[0m02:00:45.026080 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:00:45.028120 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select diagnosis_label
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where diagnosis_label is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:45.032648 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6: ROLLBACK
+[0m02:00:45.035650 [debug] [Thread-4 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762
+[0m02:00:45.041210 [debug] [Thread-3 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6'
+[0m02:00:45.043227 [debug] [Thread-4 (]: Began running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b
+[0m02:00:45.045242 [debug] [Thread-3 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6: Close
+[0m02:00:45.050831 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m02:00:45.063908 [debug] [Thread-2 (]: SQL status: OK in 0.037 seconds
+[0m02:00:45.053307 [info ] [Thread-4 (]: 10 of 14 START test not_null_stg_alzheimer_patients_processing_timestamp_utc ... [RUN]
+[0m02:00:45.069013 [debug] [Thread-2 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"
+[0m02:00:45.065925 [info ] [Thread-3 (]: 7 of 14 PASS not_null_stg_alzheimer_patients_diagnosis_code .................... [[32mPASS[0m in 0.24s]
+[0m02:00:45.075056 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3: ROLLBACK
+[0m02:00:45.077092 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_age_group.d17b15d762, now test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b)
+[0m02:00:45.080631 [debug] [Thread-2 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select patient_id
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where patient_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:45.084631 [debug] [Thread-3 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6
+[0m02:00:45.086634 [debug] [Thread-4 (]: Began compiling node test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b
+[0m02:00:45.090619 [debug] [Thread-1 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3'
+[0m02:00:45.093130 [debug] [Thread-3 (]: Began running node test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac
+[0m02:00:45.119319 [debug] [Thread-4 (]: Writing injected SQL for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"
+[0m02:00:45.120834 [debug] [Thread-1 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3: Close
+[0m02:00:45.123606 [debug] [Thread-2 (]: SQL status: OK in 0.032 seconds
+[0m02:00:45.122598 [info ] [Thread-3 (]: 11 of 14 START test unique_stg_alzheimer_patients_patient_id ................... [RUN]
+[0m02:00:45.133144 [debug] [Thread-2 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e: ROLLBACK
+[0m02:00:45.126599 [info ] [Thread-1 (]: 8 of 14 PASS not_null_stg_alzheimer_patients_diagnosis_label ................... [[32mPASS[0m in 0.28s]
+[0m02:00:45.135196 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_code.ace546dce6, now test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac)
+[0m02:00:45.136736 [debug] [Thread-4 (]: Began executing node test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b
+[0m02:00:45.140766 [debug] [Thread-2 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e'
+[0m02:00:45.142787 [debug] [Thread-1 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3
+[0m02:00:45.144789 [debug] [Thread-3 (]: Began compiling node test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac
+[0m02:00:45.151324 [debug] [Thread-4 (]: Writing runtime sql for node "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"
+[0m02:00:45.152845 [debug] [Thread-2 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e: Close
+[0m02:00:45.191343 [debug] [Thread-3 (]: Writing injected SQL for node "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"
+[0m02:00:45.195886 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"
+[0m02:00:45.194872 [info ] [Thread-2 (]: 9 of 14 PASS not_null_stg_alzheimer_patients_patient_id ........................ [[32mPASS[0m in 0.27s]
+[0m02:00:45.198892 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b: BEGIN
+[0m02:00:45.200895 [debug] [Thread-2 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e
+[0m02:00:45.202883 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:00:45.205410 [debug] [Thread-3 (]: Began executing node test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac
+[0m02:00:45.223812 [debug] [Thread-4 (]: SQL status: OK in 0.019 seconds
+[0m02:00:45.218014 [debug] [Thread-3 (]: Writing runtime sql for node "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"
+[0m02:00:45.230263 [debug] [Thread-4 (]: Using duckdb connection "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"
+[0m02:00:45.235627 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select processing_timestamp_utc
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where processing_timestamp_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:45.238645 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"
+[0m02:00:45.239640 [debug] [Thread-3 (]: On test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac: BEGIN
+[0m02:00:45.241640 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:00:45.243661 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m02:00:45.251225 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b: ROLLBACK
+[0m02:00:45.253228 [debug] [Thread-3 (]: SQL status: OK in 0.011 seconds
+[0m02:00:45.255234 [debug] [Thread-3 (]: Using duckdb connection "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"
+[0m02:00:45.258222 [debug] [Thread-4 (]: Failed to rollback 'test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b'
+[0m02:00:45.260764 [debug] [Thread-3 (]: On test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    patient_id as unique_field,
+    count(*) as n_records
+
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+where patient_id is not null
+group by patient_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:00:45.262758 [debug] [Thread-4 (]: On test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b: Close
+[0m02:00:45.272433 [debug] [Thread-3 (]: SQL status: OK in 0.008 seconds
+[0m02:00:45.270341 [info ] [Thread-4 (]: 10 of 14 PASS not_null_stg_alzheimer_patients_processing_timestamp_utc ......... [[32mPASS[0m in 0.19s]
+[0m02:00:45.281103 [debug] [Thread-4 (]: Finished running node test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b
+[0m02:00:45.285695 [debug] [Thread-3 (]: On test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac: ROLLBACK
+[0m02:00:45.291228 [debug] [Thread-3 (]: Failed to rollback 'test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac'
+[0m02:00:45.293227 [debug] [Thread-3 (]: On test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac: Close
+[0m02:00:45.296374 [info ] [Thread-3 (]: 11 of 14 PASS unique_stg_alzheimer_patients_patient_id ......................... [[32mPASS[0m in 0.16s]
+[0m02:00:45.301899 [debug] [Thread-3 (]: Finished running node test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac
+[0m02:00:45.304966 [debug] [Thread-1 (]: Began running node model.alzheimers_analytics.dim_diagnosis
+[0m02:00:45.309491 [debug] [Thread-2 (]: Began running node model.alzheimers_analytics.dim_patient
+[0m02:00:45.311162 [debug] [Thread-4 (]: Began running node model.alzheimers_analytics.fct_patient_assessment
+[0m02:00:45.306803 [info ] [Thread-1 (]: 12 of 14 START sql table model analytics.dim_diagnosis ......................... [RUN]
+[0m02:00:45.318274 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_diagnosis_label.391e1c06e3, now model.alzheimers_analytics.dim_diagnosis)
+[0m02:00:45.313475 [info ] [Thread-2 (]: 13 of 14 START sql table model analytics.dim_patient ........................... [RUN]
+[0m02:00:45.321279 [debug] [Thread-1 (]: Began compiling node model.alzheimers_analytics.dim_diagnosis
+[0m02:00:45.317262 [info ] [Thread-4 (]: 14 of 14 START sql table model analytics.fct_patient_assessment ................ [RUN]
+[0m02:00:45.324332 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_patient_id.21b17b586e, now model.alzheimers_analytics.dim_patient)
+[0m02:00:45.331867 [debug] [Thread-1 (]: Writing injected SQL for node "model.alzheimers_analytics.dim_diagnosis"
+[0m02:00:45.333867 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.alzheimers_analytics.not_null_stg_alzheimer_patients_processing_timestamp_utc.21d965514b, now model.alzheimers_analytics.fct_patient_assessment)
+[0m02:00:45.335869 [debug] [Thread-2 (]: Began compiling node model.alzheimers_analytics.dim_patient
+[0m02:00:45.337867 [debug] [Thread-4 (]: Began compiling node model.alzheimers_analytics.fct_patient_assessment
+[0m02:00:45.352030 [debug] [Thread-4 (]: Writing injected SQL for node "model.alzheimers_analytics.fct_patient_assessment"
+[0m02:00:45.354029 [debug] [Thread-2 (]: Writing injected SQL for node "model.alzheimers_analytics.dim_patient"
+[0m02:00:45.359085 [debug] [Thread-1 (]: Began executing node model.alzheimers_analytics.dim_diagnosis
+[0m02:00:45.438766 [debug] [Thread-1 (]: Writing runtime sql for node "model.alzheimers_analytics.dim_diagnosis"
+[0m02:00:45.440282 [debug] [Thread-4 (]: Began executing node model.alzheimers_analytics.fct_patient_assessment
+[0m02:00:45.458345 [debug] [Thread-2 (]: Began executing node model.alzheimers_analytics.dim_patient
+[0m02:00:45.488366 [debug] [Thread-4 (]: Writing runtime sql for node "model.alzheimers_analytics.fct_patient_assessment"
+[0m02:00:45.492384 [debug] [Thread-4 (]: Using duckdb connection "model.alzheimers_analytics.fct_patient_assessment"
+[0m02:00:45.494387 [debug] [Thread-4 (]: On model.alzheimers_analytics.fct_patient_assessment: BEGIN
+[0m02:00:45.495391 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:00:45.520171 [debug] [Thread-2 (]: Writing runtime sql for node "model.alzheimers_analytics.dim_patient"
+[0m02:00:45.523752 [debug] [Thread-4 (]: SQL status: OK in 0.027 seconds
+[0m02:00:45.526751 [debug] [Thread-4 (]: Using duckdb connection "model.alzheimers_analytics.fct_patient_assessment"
+[0m02:00:45.528747 [debug] [Thread-4 (]: On model.alzheimers_analytics.fct_patient_assessment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.fct_patient_assessment"} */
+
+  
+    
+    
+
+    create  table
+      "alzheimers_analytics"."analytics"."fct_patient_assessment__dbt_tmp"
+  
+    as (
+      select
+    patient_id,
+    diagnosis_code,
+
+    bmi,
+    smoking,
+    alcohol_consumption,
+    physical_activity,
+    diet_quality,
+    sleep_quality,
+
+    family_history_alzheimers,
+    cardiovascular_disease,
+    diabetes,
+    depression,
+    head_injury,
+    hypertension,
+
+    systolic_bp,
+    diastolic_bp,
+
+    cholesterol_total,
+    cholesterol_ldl,
+    cholesterol_hdl,
+    cholesterol_triglycerides,
+
+    mmse,
+    mmse_band,
+    functional_assessment,
+    functional_assessment_band,
+    adl,
+    adl_band,
+
+    memory_complaints,
+    behavioral_problems,
+    confusion,
+    disorientation,
+    personality_changes,
+    difficulty_completing_tasks,
+    forgetfulness,
+
+    medical_history_count,
+    symptom_count,
+
+    processing_timestamp_utc,
+    source_file_name
+
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    );
+  
+  
+[0m02:00:45.532300 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.dim_diagnosis"
+[0m02:00:45.533311 [debug] [Thread-2 (]: Using duckdb connection "model.alzheimers_analytics.dim_patient"
+[0m02:00:45.535327 [debug] [Thread-1 (]: On model.alzheimers_analytics.dim_diagnosis: BEGIN
+[0m02:00:45.537339 [debug] [Thread-2 (]: On model.alzheimers_analytics.dim_patient: BEGIN
+[0m02:00:45.539368 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:00:45.540393 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:00:45.542918 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m02:00:45.544919 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.dim_diagnosis"
+[0m02:00:45.546430 [debug] [Thread-1 (]: On model.alzheimers_analytics.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.dim_diagnosis"} */
+
+  
+    
+    
+
+    create  table
+      "alzheimers_analytics"."analytics"."dim_diagnosis__dbt_tmp"
+  
+    as (
+      select distinct
+    diagnosis_code,
+    diagnosis_label
+
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    );
+  
+  
+[0m02:00:45.548450 [debug] [Thread-2 (]: SQL status: OK in 0.008 seconds
+[0m02:00:45.550964 [debug] [Thread-2 (]: Using duckdb connection "model.alzheimers_analytics.dim_patient"
+[0m02:00:45.552477 [debug] [Thread-2 (]: On model.alzheimers_analytics.dim_patient: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.dim_patient"} */
+
+  
+    
+    
+
+    create  table
+      "alzheimers_analytics"."analytics"."dim_patient__dbt_tmp"
+  
+    as (
+      select
+    patient_id,
+    age,
+    age_group,
+    gender_code,
+    gender_label,
+    ethnicity_code,
+    ethnicity_label,
+    education_level_code,
+    education_label
+
+from "alzheimers_analytics"."analytics"."stg_alzheimer_patients"
+    );
+  
+  
+[0m02:00:45.558008 [debug] [Thread-4 (]: SQL status: OK in 0.026 seconds
+[0m02:00:45.568621 [debug] [Thread-4 (]: Using duckdb connection "model.alzheimers_analytics.fct_patient_assessment"
+[0m02:00:45.570157 [debug] [Thread-4 (]: On model.alzheimers_analytics.fct_patient_assessment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.fct_patient_assessment"} */
+alter table "alzheimers_analytics"."analytics"."fct_patient_assessment__dbt_tmp" rename to "fct_patient_assessment"
+[0m02:00:45.572161 [debug] [Thread-1 (]: SQL status: OK in 0.024 seconds
+[0m02:00:45.581305 [debug] [Thread-2 (]: SQL status: OK in 0.027 seconds
+[0m02:00:45.585356 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.dim_diagnosis"
+[0m02:00:45.593479 [debug] [Thread-2 (]: Using duckdb connection "model.alzheimers_analytics.dim_patient"
+[0m02:00:45.596000 [debug] [Thread-1 (]: On model.alzheimers_analytics.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.dim_diagnosis"} */
+alter table "alzheimers_analytics"."analytics"."dim_diagnosis__dbt_tmp" rename to "dim_diagnosis"
+[0m02:00:45.598002 [debug] [Thread-2 (]: On model.alzheimers_analytics.dim_patient: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.dim_patient"} */
+alter table "alzheimers_analytics"."analytics"."dim_patient__dbt_tmp" rename to "dim_patient"
+[0m02:00:45.600068 [debug] [Thread-4 (]: SQL status: OK in 0.028 seconds
+[0m02:00:45.602091 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m02:00:45.603619 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m02:00:45.660552 [debug] [Thread-1 (]: On model.alzheimers_analytics.dim_diagnosis: COMMIT
+[0m02:00:45.665618 [debug] [Thread-4 (]: On model.alzheimers_analytics.fct_patient_assessment: COMMIT
+[0m02:00:45.673156 [debug] [Thread-2 (]: On model.alzheimers_analytics.dim_patient: COMMIT
+[0m02:00:45.675702 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.dim_diagnosis"
+[0m02:00:45.677249 [debug] [Thread-4 (]: Using duckdb connection "model.alzheimers_analytics.fct_patient_assessment"
+[0m02:00:45.678812 [debug] [Thread-2 (]: Using duckdb connection "model.alzheimers_analytics.dim_patient"
+[0m02:00:45.679826 [debug] [Thread-1 (]: On model.alzheimers_analytics.dim_diagnosis: COMMIT
+[0m02:00:45.681825 [debug] [Thread-4 (]: On model.alzheimers_analytics.fct_patient_assessment: COMMIT
+[0m02:00:45.683344 [debug] [Thread-2 (]: On model.alzheimers_analytics.dim_patient: COMMIT
+[0m02:00:45.687866 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m02:00:45.694425 [debug] [Thread-1 (]: Using duckdb connection "model.alzheimers_analytics.dim_diagnosis"
+[0m02:00:45.696427 [debug] [Thread-1 (]: On model.alzheimers_analytics.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.dim_diagnosis"} */
+
+      drop table if exists "alzheimers_analytics"."analytics"."dim_diagnosis__dbt_backup" cascade
+    
+[0m02:00:45.698427 [debug] [Thread-4 (]: SQL status: OK in 0.013 seconds
+[0m02:00:45.704465 [debug] [Thread-4 (]: Using duckdb connection "model.alzheimers_analytics.fct_patient_assessment"
+[0m02:00:45.705478 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m02:00:45.708523 [debug] [Thread-4 (]: On model.alzheimers_analytics.fct_patient_assessment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.fct_patient_assessment"} */
+
+      drop table if exists "alzheimers_analytics"."analytics"."fct_patient_assessment__dbt_backup" cascade
+    
+[0m02:00:45.713084 [debug] [Thread-1 (]: On model.alzheimers_analytics.dim_diagnosis: Close
+[0m02:00:45.714091 [debug] [Thread-2 (]: SQL status: OK in 0.028 seconds
+[0m02:00:45.722170 [debug] [Thread-2 (]: Using duckdb connection "model.alzheimers_analytics.dim_patient"
+[0m02:00:45.723688 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m02:00:45.725703 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C2A5391F0>]}
+[0m02:00:45.727228 [debug] [Thread-2 (]: On model.alzheimers_analytics.dim_patient: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "alzheimers_analytics", "target_name": "dev", "node_id": "model.alzheimers_analytics.dim_patient"} */
+
+      drop table if exists "alzheimers_analytics"."analytics"."dim_patient__dbt_backup" cascade
+    
+[0m02:00:45.732786 [debug] [Thread-4 (]: On model.alzheimers_analytics.fct_patient_assessment: Close
+[0m02:00:45.737300 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C2A618530>]}
+[0m02:00:45.734778 [info ] [Thread-1 (]: 12 of 14 OK created sql table model analytics.dim_diagnosis .................... [[32mOK[0m in 0.41s]
+[0m02:00:45.741844 [debug] [Thread-1 (]: Finished running node model.alzheimers_analytics.dim_diagnosis
+[0m02:00:45.744388 [debug] [Thread-2 (]: SQL status: OK in 0.008 seconds
+[0m02:00:45.739819 [info ] [Thread-4 (]: 14 of 14 OK created sql table model analytics.fct_patient_assessment ........... [[32mOK[0m in 0.40s]
+[0m02:00:45.749911 [debug] [Thread-2 (]: On model.alzheimers_analytics.dim_patient: Close
+[0m02:00:45.752914 [debug] [Thread-4 (]: Finished running node model.alzheimers_analytics.fct_patient_assessment
+[0m02:00:45.755439 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2f2628c6-0337-4764-a2a9-27cd87edc30d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C2A61D4F0>]}
+[0m02:00:45.762009 [info ] [Thread-2 (]: 13 of 14 OK created sql table model analytics.dim_patient ...................... [[32mOK[0m in 0.43s]
+[0m02:00:45.764528 [debug] [Thread-2 (]: Finished running node model.alzheimers_analytics.dim_patient
+[0m02:00:45.770540 [debug] [MainThread]: Using duckdb connection "master"
+[0m02:00:45.772542 [debug] [MainThread]: On master: BEGIN
+[0m02:00:45.773554 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:00:45.775053 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m02:00:45.777069 [debug] [MainThread]: On master: COMMIT
+[0m02:00:45.778073 [debug] [MainThread]: Using duckdb connection "master"
+[0m02:00:45.779576 [debug] [MainThread]: On master: COMMIT
+[0m02:00:45.781096 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m02:00:45.782609 [debug] [MainThread]: On master: Close
+[0m02:00:45.784623 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:00:45.785624 [debug] [MainThread]: Connection 'create_alzheimers_analytics_analytics' was properly closed.
+[0m02:00:45.787623 [debug] [MainThread]: Connection 'list_alzheimers_analytics_analytics' was properly closed.
+[0m02:00:45.788626 [debug] [MainThread]: Connection 'model.alzheimers_analytics.dim_diagnosis' was properly closed.
+[0m02:00:45.789625 [debug] [MainThread]: Connection 'test.alzheimers_analytics.unique_stg_alzheimer_patients_patient_id.9c5486b4ac' was properly closed.
+[0m02:00:45.791626 [debug] [MainThread]: Connection 'model.alzheimers_analytics.fct_patient_assessment' was properly closed.
+[0m02:00:45.795188 [debug] [MainThread]: Connection 'model.alzheimers_analytics.dim_patient' was properly closed.
+[0m02:00:45.797696 [info ] [MainThread]: 
+[0m02:00:45.806428 [info ] [MainThread]: Finished running 3 table models, 10 data tests, 1 view model in 0 hours 0 minutes and 2.91 seconds (2.91s).
+[0m02:00:45.823985 [debug] [MainThread]: Command end result
+[0m02:00:46.003692 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m02:00:46.016668 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m02:00:46.028705 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m02:00:46.056296 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt_project\target\run_results.json
+[0m02:00:46.057311 [info ] [MainThread]: 
+[0m02:00:46.058298 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:00:46.060298 [info ] [MainThread]: 
+[0m02:00:46.061293 [info ] [MainThread]: Done. PASS=14 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=14
+[0m02:00:46.065336 [debug] [MainThread]: Command `dbt build` succeeded at 02:00:46.065336 after 8.07 seconds
+[0m02:00:46.067348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C247F57F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C25BC99D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C27D97290>]}
+[0m02:00:46.068353 [debug] [MainThread]: Flushing usage events
+[0m02:00:47.605954 [debug] [MainThread]: An error was encountered while trying to flush usage events

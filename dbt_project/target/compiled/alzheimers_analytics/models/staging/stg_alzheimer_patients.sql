@@ -62,4 +62,4 @@ select
 
     SourceFileName as source_file_name
 
-from {{ source('silver', 'silver_alzheimer_patients') }}
+from "alzheimers_analytics"."main"."silver_alzheimer_patients"

@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: silver
+    description: >
+      Validated and enriched Alzheimer patient data
+      loaded into DuckDB from the Silver Parquet file.
+
+    schema: main
+
+    tables:
+      - name: silver_alzheimer_patients
+        description: >
+          One record per patient after Bronze validation
+          and Silver transformation.
+
+        columns:
+          - name: PatientID
+            description: Unique patient identifier.
+            data_tests:
+              - not_null
+              - unique
+
+          - name: Diagnosis
+            description: >
+              Diagnosis indicator: 0 for not diagnosed
+              and 1 for diagnosed.
+            data_tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: [0, 1]
+
+          - name: ProcessingTimestampUTC
+            description: UTC timestamp of the Silver transformation.
+            data_tests:
+              - not_null

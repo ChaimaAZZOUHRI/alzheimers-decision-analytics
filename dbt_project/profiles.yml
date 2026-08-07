@@ -1,0 +1,9 @@
+alzheimers_analytics:
+  target: dev
+
+  outputs:
+    dev:
+      type: duckdb
+      path: data/warehouse/alzheimers_analytics.duckdb
+      schema: analytics
+      threads: 4

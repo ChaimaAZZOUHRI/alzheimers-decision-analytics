@@ -1,4 +1,7 @@
-select
+
+  
+  create view "alzheimers_analytics"."analytics"."stg_alzheimer_patients__dbt_tmp" as (
+    select
     PatientID as patient_id,
     Age as age,
 
@@ -62,4 +65,5 @@ select
 
     SourceFileName as source_file_name
 
-from {{ source('silver', 'silver_alzheimer_patients') }}
+from "alzheimers_analytics"."main"."silver_alzheimer_patients"
+  );
