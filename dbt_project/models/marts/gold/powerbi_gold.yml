@@ -1,0 +1,83 @@
+version: 2
+
+models:
+  - name: gold_demographics
+    description: >
+      Demographic segmentation indicators prepared
+      for Power BI charts.
+
+    columns:
+      - name: demographic_key
+        data_tests:
+          - not_null
+          - unique
+
+      - name: group_type
+        data_tests:
+          - not_null
+
+      - name: group_value
+        data_tests:
+          - not_null
+
+      - name: total_patients
+        data_tests:
+          - not_null
+
+      - name: diagnosis_rate_pct
+        data_tests:
+          - not_null
+
+  - name: gold_risk_factors
+    description: >
+      Diagnosis indicators comparing patients with
+      and without each binary risk factor.
+
+    columns:
+      - name: risk_factor_key
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_patients
+        data_tests:
+          - not_null
+
+      - name: patients_with_factor
+        data_tests:
+          - not_null
+
+      - name: patients_without_factor
+        data_tests:
+          - not_null
+
+      - name: diagnosis_rate_with_factor_pct
+        data_tests:
+          - not_null
+
+  - name: gold_symptoms
+    description: >
+      Symptom prevalence and diagnosis indicators
+      prepared for Power BI analysis.
+
+    columns:
+      - name: symptom_key
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_patients
+        data_tests:
+          - not_null
+
+      - name: patients_with_symptom
+        data_tests:
+          - not_null
+
+      - name: patients_without_symptom
+        data_tests:
+          - not_null
+
+      - name: diagnosis_rate_with_symptom_pct
+        data_tests:
+          - not_null
