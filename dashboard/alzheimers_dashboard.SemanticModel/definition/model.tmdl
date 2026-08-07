@@ -1,0 +1,25 @@
+model Model
+	culture: en-GB
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["dim_patient","dim_diagnosis","fct_patient_assessment","gold_kpi_overview","gold_demographics","gold_risk_factors","gold_symptoms"]
+
+ref table dim_patient
+ref table dim_diagnosis
+ref table fct_patient_assessment
+ref table gold_kpi_overview
+ref table gold_demographics
+ref table gold_risk_factors
+ref table gold_symptoms
+
+ref cultureInfo en-GB
+

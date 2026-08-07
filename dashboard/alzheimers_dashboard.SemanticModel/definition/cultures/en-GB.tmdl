@@ -1,0 +1,116 @@
+cultureInfo en-GB
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "gold_risk_factors.risk_factor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_risk_factors",
+			          "ConceptualProperty": "risk_factor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Risk factor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_risk_factors.factor_prevalence_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_risk_factors",
+			          "ConceptualProperty": "factor_prevalence_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Prevalence (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_risk_factors.diagnosis_rate_with_factor_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_risk_factors",
+			          "ConceptualProperty": "diagnosis_rate_with_factor_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Diagnosis with factor (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_risk_factors.diagnosis_rate_without_factor_pct": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_risk_factors",
+			          "ConceptualProperty": "diagnosis_rate_without_factor_pct"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Diagnosis without factor (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "gold_risk_factors.diagnosis_rate_difference_pct_points": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold_risk_factors",
+			          "ConceptualProperty": "diagnosis_rate_difference_pct_points"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Difference (pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

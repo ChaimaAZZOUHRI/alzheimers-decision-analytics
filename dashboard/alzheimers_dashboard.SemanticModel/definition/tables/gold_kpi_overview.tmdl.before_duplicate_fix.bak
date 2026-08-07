@@ -1,0 +1,147 @@
+table gold_kpi_overview
+	lineageTag: 95fc0f52-afee-4097-beb2-fef1f0b50e78
+
+	measure 'Total Patients' = MAX('gold_kpi_overview'[total_patients])
+		formatString: #,0
+		lineageTag: bde34c6b-de73-4c87-8df3-5c4751cf8c75
+
+	measure 'Diagnosed Patients' = MAX('gold_kpi_overview'[diagnosed_patients])
+		formatString: #,0
+		lineageTag: 0b74664e-c6cf-4cab-9dd8-65df3261bc86
+
+	measure 'Not Diagnosed Patients' = MAX('gold_kpi_overview'[not_diagnosed_patients])
+		formatString: #,0
+		lineageTag: 5db28581-99d3-4a15-8366-515395ef8409
+
+	measure 'Diagnosis Rate' = DIVIDE([Diagnosed Patients], [Total Patients])
+		formatString: 0.00%
+		lineageTag: 80e16e6d-e5dc-494c-9fc0-986d6df17067
+
+	measure 'Average Age' = MAX('gold_kpi_overview'[average_age])
+		formatString: 0.00
+		lineageTag: 3dea2865-7c75-4a31-829c-14d9017598b1
+
+	measure 'Average BMI' = MAX('gold_kpi_overview'[average_bmi])
+		formatString: 0.00
+		lineageTag: 8997f72d-51e8-41b3-9e96-de453fa6f694
+
+	measure 'Average MMSE' = MAX('gold_kpi_overview'[average_mmse])
+		formatString: 0.00
+		lineageTag: 3f921988-bd42-4b93-bb15-d814ba120042
+
+	measure 'Average Functional Assessment' = MAX('gold_kpi_overview'[average_functional_assessment])
+		formatString: 0.00
+		lineageTag: 827961ca-60d9-48df-b5be-90f3b70ef384
+
+	measure 'Average ADL' = MAX('gold_kpi_overview'[average_adl])
+		formatString: 0.00
+		lineageTag: b7192b54-09a6-4bd1-9b9b-216c412b2c69
+
+	column overview_key
+		dataType: int64
+		isKey
+		formatString: 0
+		lineageTag: 29a1738f-cad6-4147-bfd4-95d99cd126a6
+		summarizeBy: none
+		sourceColumn: overview_key
+
+	column total_patients
+		dataType: int64
+		formatString: #,0
+		lineageTag: ba440e2a-3b79-4bca-b2cd-c71580650c47
+		summarizeBy: none
+		sourceColumn: total_patients
+
+	column diagnosed_patients
+		dataType: int64
+		formatString: #,0
+		lineageTag: 42326e11-c25d-4fa1-8399-18ae66171650
+		summarizeBy: none
+		sourceColumn: diagnosed_patients
+
+	column not_diagnosed_patients
+		dataType: int64
+		formatString: #,0
+		lineageTag: 4709e6b2-d9b1-4e4a-bb1c-551aa4d3a2a0
+		summarizeBy: none
+		sourceColumn: not_diagnosed_patients
+
+	column diagnosis_rate_pct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 0335ff45-b8a0-48d3-babe-5749551d1a28
+		summarizeBy: none
+		sourceColumn: diagnosis_rate_pct
+
+	column average_age
+		dataType: double
+		formatString: 0.00
+		lineageTag: 3994ab81-2d97-4879-9aec-2ec514c03a6e
+		summarizeBy: none
+		sourceColumn: average_age
+
+	column average_bmi
+		dataType: double
+		formatString: 0.00
+		lineageTag: dca948d8-fe6c-43a4-8965-17f36ca2868d
+		summarizeBy: none
+		sourceColumn: average_bmi
+
+	column average_mmse
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4a757456-1bde-4247-9420-8c6a8d464874
+		summarizeBy: none
+		sourceColumn: average_mmse
+
+	column average_functional_assessment
+		dataType: double
+		formatString: 0.00
+		lineageTag: eae00f4f-bbfc-4649-9f54-7540433284f8
+		summarizeBy: none
+		sourceColumn: average_functional_assessment
+
+	column average_adl
+		dataType: double
+		formatString: 0.00
+		lineageTag: 7286dd5f-c90a-4c3b-86f4-4299117daef7
+		summarizeBy: none
+		sourceColumn: average_adl
+
+	column average_symptom_count
+		dataType: double
+		formatString: 0.00
+		lineageTag: 7d885eb1-22ba-4bd6-904c-0a019a25e92b
+		summarizeBy: none
+		sourceColumn: average_symptom_count
+
+	column average_medical_history_count
+		dataType: double
+		formatString: 0.00
+		lineageTag: 8a54106f-96c0-40a5-9fba-836748f198fc
+		summarizeBy: none
+		sourceColumn: average_medical_history_count
+
+	partition gold_kpi_overview = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents("C:\Users\chaima\Desktop\alzheimers-decision-analytics\data\gold\powerbi\gold_kpi_overview.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					#"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					#"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {
+						{"overview_key", Int64.Type},
+						{"total_patients", Int64.Type},
+						{"diagnosed_patients", Int64.Type},
+						{"not_diagnosed_patients", Int64.Type},
+						{"diagnosis_rate_pct", type number},
+						{"average_age", type number},
+						{"average_bmi", type number},
+						{"average_mmse", type number},
+						{"average_functional_assessment", type number},
+						{"average_adl", type number},
+						{"average_symptom_count", type number},
+						{"average_medical_history_count", type number}
+					}, "en-GB")
+				in
+					#"Changed Type"
+

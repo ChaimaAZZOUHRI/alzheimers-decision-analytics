@@ -1,0 +1,329 @@
+table fct_patient_assessment
+	lineageTag: 7c192bc9-f9a4-475c-b976-1c1144839744
+
+	measure 'Total Patients' = DISTINCTCOUNT(fct_patient_assessment[patient_id])
+		formatString: #,0
+		lineageTag: 1725c61b-784c-472a-aa27-a8c9dec183ff
+
+	measure 'Diagnosed Patients' = CALCULATE([Total Patients], fct_patient_assessment[diagnosis_code] = 1)
+		formatString: #,0
+		lineageTag: 21f4d198-a872-43fc-95d5-91926803dc0b
+
+	measure 'Not Diagnosed Patients' = CALCULATE([Total Patients], fct_patient_assessment[diagnosis_code] = 0)
+		formatString: #,0
+		lineageTag: 3f4ce641-4951-4320-9c54-38f6218dd45b
+
+	measure 'Diagnosis Rate' = DIVIDE([Diagnosed Patients], [Total Patients])
+		formatString: 0.00%
+		lineageTag: 8c4f8cac-a81b-4867-95c5-3a34127267bd
+
+	measure 'Average Age' = AVERAGE(dim_patient[age])
+		formatString: 0.00
+		lineageTag: c5ffc764-7c6f-4e1f-8edd-c14575da08e5
+
+	measure 'Average MMSE' = AVERAGE(fct_patient_assessment[mmse])
+		formatString: 0.00
+		lineageTag: 82768939-2ed7-4d68-8b51-fd3a27f43175
+
+	column patient_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a4633614-ef45-4c0c-8e2f-1ddf71e54771
+		summarizeBy: none
+		sourceColumn: patient_id
+
+	column diagnosis_code
+		dataType: int64
+		formatString: 0
+		lineageTag: df5ca963-bb17-47a8-8c7c-56c4738e0053
+		summarizeBy: none
+		sourceColumn: diagnosis_code
+
+	column bmi
+		dataType: double
+		formatString: 0.00
+		lineageTag: 0131122a-0dde-4ea8-a767-b9166df15ae4
+		summarizeBy: none
+		sourceColumn: bmi
+
+	column smoking
+		dataType: int64
+		formatString: 0
+		lineageTag: 63d6f659-e773-45c6-bb1b-57143a2ab987
+		summarizeBy: none
+		sourceColumn: smoking
+
+	column alcohol_consumption
+		dataType: double
+		formatString: 0.00
+		lineageTag: cd866aba-b64b-4390-aeb8-dc448262fbcd
+		summarizeBy: none
+		sourceColumn: alcohol_consumption
+
+	column physical_activity
+		dataType: double
+		formatString: 0.00
+		lineageTag: 6d841470-1edf-43c2-a4c1-08546ecfef66
+		summarizeBy: none
+		sourceColumn: physical_activity
+
+	column diet_quality
+		dataType: double
+		formatString: 0.00
+		lineageTag: 6d98b323-d33b-4795-8643-604bef96f610
+		summarizeBy: none
+		sourceColumn: diet_quality
+
+	column sleep_quality
+		dataType: double
+		formatString: 0.00
+		lineageTag: 9a90b90d-d0ed-4759-bbcc-a27c7f64d9c8
+		summarizeBy: none
+		sourceColumn: sleep_quality
+
+	column family_history_alzheimers
+		dataType: int64
+		formatString: 0
+		lineageTag: aa8e4b32-189a-4e81-bad5-b069cef6ce60
+		summarizeBy: none
+		sourceColumn: family_history_alzheimers
+
+	column cardiovascular_disease
+		dataType: int64
+		formatString: 0
+		lineageTag: c5f39d75-21bd-4449-96c9-1c3e1e66a685
+		summarizeBy: none
+		sourceColumn: cardiovascular_disease
+
+	column diabetes
+		dataType: int64
+		formatString: 0
+		lineageTag: e38854eb-bb61-4ca0-8222-94f0f74eb37f
+		summarizeBy: none
+		sourceColumn: diabetes
+
+	column depression
+		dataType: int64
+		formatString: 0
+		lineageTag: a7c472f5-4d37-46db-b8e4-1f69472c39d9
+		summarizeBy: none
+		sourceColumn: depression
+
+	column head_injury
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e417839-f2d5-4f3a-92b0-cb2bfb8deccf
+		summarizeBy: none
+		sourceColumn: head_injury
+
+	column hypertension
+		dataType: int64
+		formatString: 0
+		lineageTag: b584d19a-bdc6-41b2-a440-56709aed1c83
+		summarizeBy: none
+		sourceColumn: hypertension
+
+	column systolic_bp
+		dataType: int64
+		formatString: 0
+		lineageTag: 204a94a2-fee3-4d0c-a178-d0d315e2ab53
+		summarizeBy: none
+		sourceColumn: systolic_bp
+
+	column diastolic_bp
+		dataType: int64
+		formatString: 0
+		lineageTag: ca33e066-817e-4373-94c4-3aea47f4890c
+		summarizeBy: none
+		sourceColumn: diastolic_bp
+
+	column cholesterol_total
+		dataType: double
+		formatString: 0.00
+		lineageTag: e23713e1-3f23-44ab-a5fe-1eb1b3afd2d9
+		summarizeBy: none
+		sourceColumn: cholesterol_total
+
+	column cholesterol_ldl
+		dataType: double
+		formatString: 0.00
+		lineageTag: 56944458-0640-43cd-b80d-7fa2e4c3a1eb
+		summarizeBy: none
+		sourceColumn: cholesterol_ldl
+
+	column cholesterol_hdl
+		dataType: double
+		formatString: 0.00
+		lineageTag: 1d9bb4ab-2915-423e-b29d-d5bd41d5bb55
+		summarizeBy: none
+		sourceColumn: cholesterol_hdl
+
+	column cholesterol_triglycerides
+		dataType: double
+		formatString: 0.00
+		lineageTag: d0512127-66b4-418e-8533-2a9aa3abb4ad
+		summarizeBy: none
+		sourceColumn: cholesterol_triglycerides
+
+	column mmse
+		dataType: double
+		formatString: 0.00
+		lineageTag: 29d30507-2cf8-4faf-9503-a06253e67bf0
+		summarizeBy: none
+		sourceColumn: mmse
+
+	column mmse_band
+		dataType: string
+		lineageTag: db8b0205-5837-46bb-8cd5-4c4c8e5dd973
+		summarizeBy: none
+		sourceColumn: mmse_band
+
+	column functional_assessment
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4f60cfa5-a45a-42f7-9e08-8a405af528c3
+		summarizeBy: none
+		sourceColumn: functional_assessment
+
+	column functional_assessment_band
+		dataType: string
+		lineageTag: f8c31772-d05d-48c6-8caf-3b9770e5155c
+		summarizeBy: none
+		sourceColumn: functional_assessment_band
+
+	column adl
+		dataType: double
+		formatString: 0.00
+		lineageTag: 19cec943-4d8d-444f-9070-f9887b190ea2
+		summarizeBy: none
+		sourceColumn: adl
+
+	column adl_band
+		dataType: string
+		lineageTag: c6c5589b-af84-46fb-b684-f3ddc53bf033
+		summarizeBy: none
+		sourceColumn: adl_band
+
+	column memory_complaints
+		dataType: int64
+		formatString: 0
+		lineageTag: 762f64f8-a88b-4dcd-aec9-547b46fd25cd
+		summarizeBy: none
+		sourceColumn: memory_complaints
+
+	column behavioral_problems
+		dataType: int64
+		formatString: 0
+		lineageTag: 84217942-4893-4728-a51d-470719574b6c
+		summarizeBy: none
+		sourceColumn: behavioral_problems
+
+	column confusion
+		dataType: int64
+		formatString: 0
+		lineageTag: 50f6fde6-1bbe-4e10-856d-00497149c545
+		summarizeBy: none
+		sourceColumn: confusion
+
+	column disorientation
+		dataType: int64
+		formatString: 0
+		lineageTag: ccc6b7af-0116-4960-8a7b-91ea0f413bdf
+		summarizeBy: none
+		sourceColumn: disorientation
+
+	column personality_changes
+		dataType: int64
+		formatString: 0
+		lineageTag: af7b027a-be71-4b1e-90a6-9f63ec6d5822
+		summarizeBy: none
+		sourceColumn: personality_changes
+
+	column difficulty_completing_tasks
+		dataType: int64
+		formatString: 0
+		lineageTag: ad71adbf-71e1-48ff-a966-cf7e1f6cd5ae
+		summarizeBy: none
+		sourceColumn: difficulty_completing_tasks
+
+	column forgetfulness
+		dataType: int64
+		formatString: 0
+		lineageTag: 53c8b5e7-7369-4e84-9b56-be64075e8725
+		summarizeBy: none
+		sourceColumn: forgetfulness
+
+	column medical_history_count
+		dataType: int64
+		formatString: 0
+		lineageTag: cfd9bb2f-90a8-4662-99e2-02d7974287de
+		summarizeBy: none
+		sourceColumn: medical_history_count
+
+	column symptom_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 51ea028e-5641-46f6-9c14-76e15f274454
+		summarizeBy: none
+		sourceColumn: symptom_count
+
+	column processing_timestamp_utc
+		dataType: string
+		lineageTag: 5070cb85-4908-41f4-a6fa-c07cf3926baf
+		summarizeBy: none
+		sourceColumn: processing_timestamp_utc
+
+	column source_file_name
+		dataType: string
+		lineageTag: f0663e20-e323-4dff-ac23-003c56500dab
+		summarizeBy: none
+		sourceColumn: source_file_name
+
+	partition fct_patient_assessment = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents("C:\Users\chaima\Desktop\alzheimers-decision-analytics\data\gold\powerbi\fct_patient_assessment.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					#"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					#"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {
+						{"patient_id", Int64.Type},
+						{"diagnosis_code", Int64.Type},
+						{"bmi", type number},
+						{"smoking", Int64.Type},
+						{"alcohol_consumption", type number},
+						{"physical_activity", type number},
+						{"diet_quality", type number},
+						{"sleep_quality", type number},
+						{"family_history_alzheimers", Int64.Type},
+						{"cardiovascular_disease", Int64.Type},
+						{"diabetes", Int64.Type},
+						{"depression", Int64.Type},
+						{"head_injury", Int64.Type},
+						{"hypertension", Int64.Type},
+						{"systolic_bp", Int64.Type},
+						{"diastolic_bp", Int64.Type},
+						{"cholesterol_total", type number},
+						{"cholesterol_ldl", type number},
+						{"cholesterol_hdl", type number},
+						{"cholesterol_triglycerides", type number},
+						{"mmse", type number},
+						{"mmse_band", type text},
+						{"functional_assessment", type number},
+						{"functional_assessment_band", type text},
+						{"adl", type number},
+						{"adl_band", type text},
+						{"memory_complaints", Int64.Type},
+						{"behavioral_problems", Int64.Type},
+						{"confusion", Int64.Type},
+						{"disorientation", Int64.Type},
+						{"personality_changes", Int64.Type},
+						{"difficulty_completing_tasks", Int64.Type},
+						{"forgetfulness", Int64.Type},
+						{"medical_history_count", Int64.Type},
+						{"symptom_count", Int64.Type},
+						{"processing_timestamp_utc", type text},
+						{"source_file_name", type text}
+					}, "en-GB")
+				in
+					#"Changed Type"
+

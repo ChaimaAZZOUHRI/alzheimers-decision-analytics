@@ -1,0 +1,109 @@
+table gold_symptoms
+	lineageTag: a282ccc1-bfe9-4716-bb64-e62fe79788cc
+
+	column symptom_key
+		dataType: string
+		isKey
+		lineageTag: 6d07c2d9-c5f6-4d51-99c6-2e69821945c4
+		summarizeBy: none
+		sourceColumn: symptom_key
+
+	column symptom
+		dataType: string
+		lineageTag: e6b0f1cb-9ff3-45f0-9133-8eba107edebc
+		summarizeBy: none
+		sourceColumn: symptom
+
+	column display_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c6543d1-c831-4b13-8693-aa43fbd13e5a
+		summarizeBy: none
+		sourceColumn: display_order
+
+	column total_patients
+		dataType: int64
+		formatString: #,0
+		lineageTag: 8a456f6b-e1cd-482c-a7cd-fcef3870a97a
+		summarizeBy: none
+		sourceColumn: total_patients
+
+	column patients_with_symptom
+		dataType: int64
+		formatString: #,0
+		lineageTag: ef85079e-aa17-4db8-b3c6-a818629d0abc
+		summarizeBy: none
+		sourceColumn: patients_with_symptom
+
+	column patients_without_symptom
+		dataType: int64
+		formatString: #,0
+		lineageTag: 8e6647a5-2515-47df-a58e-e7614d18839b
+		summarizeBy: none
+		sourceColumn: patients_without_symptom
+
+	column diagnosed_with_symptom
+		dataType: int64
+		formatString: #,0
+		lineageTag: fe3e4a43-de9c-441a-b0b0-568bf90efe1e
+		summarizeBy: none
+		sourceColumn: diagnosed_with_symptom
+
+	column diagnosed_without_symptom
+		dataType: int64
+		formatString: #,0
+		lineageTag: 345e2598-aff0-4bde-9dc7-ee8ae17506cf
+		summarizeBy: none
+		sourceColumn: diagnosed_without_symptom
+
+	column symptom_prevalence_pct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 69005c4d-fbed-47ff-9910-b99598612b48
+		summarizeBy: none
+		sourceColumn: symptom_prevalence_pct
+
+	column diagnosis_rate_with_symptom_pct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 18b090ce-1300-4493-bb56-9e722d00f18a
+		summarizeBy: none
+		sourceColumn: diagnosis_rate_with_symptom_pct
+
+	column diagnosis_rate_without_symptom_pct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 2a680d99-f52b-4976-a87c-432a94485080
+		summarizeBy: none
+		sourceColumn: diagnosis_rate_without_symptom_pct
+
+	column diagnosis_rate_difference_pct_points
+		dataType: double
+		formatString: 0.00
+		lineageTag: 1d46ce4e-a4a2-4c20-8594-9e405f3a742f
+		summarizeBy: none
+		sourceColumn: diagnosis_rate_difference_pct_points
+
+	partition gold_symptoms = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents("C:\Users\chaima\Desktop\alzheimers-decision-analytics\data\gold\powerbi\gold_symptoms.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					#"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					#"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {
+						{"symptom_key", type text},
+						{"symptom", type text},
+						{"display_order", Int64.Type},
+						{"total_patients", Int64.Type},
+						{"patients_with_symptom", Int64.Type},
+						{"patients_without_symptom", Int64.Type},
+						{"diagnosed_with_symptom", Int64.Type},
+						{"diagnosed_without_symptom", Int64.Type},
+						{"symptom_prevalence_pct", type number},
+						{"diagnosis_rate_with_symptom_pct", type number},
+						{"diagnosis_rate_without_symptom_pct", type number},
+						{"diagnosis_rate_difference_pct_points", type number}
+					}, "en-GB")
+				in
+					#"Changed Type"
+

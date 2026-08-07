@@ -1,0 +1,100 @@
+table gold_demographics
+	lineageTag: bf02fc09-76cd-4121-b22a-467c0b2bf754
+
+	column demographic_key
+		dataType: string
+		isKey
+		lineageTag: 8bdd423d-a316-48bd-bb08-78d948158d66
+		summarizeBy: none
+		sourceColumn: demographic_key
+
+	column group_type
+		dataType: string
+		lineageTag: 0650ff03-0374-4024-aa93-a6d9d4c18df7
+		summarizeBy: none
+		sourceColumn: group_type
+
+	column group_type_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 7dc93829-3816-4d5d-a925-dcd1805e7e5c
+		summarizeBy: none
+		sourceColumn: group_type_order
+
+	column group_value
+		dataType: string
+		lineageTag: 805f2a32-6e94-428e-8219-b363a9e81027
+		summarizeBy: none
+		sourceColumn: group_value
+
+	column category_order
+		dataType: int64
+		formatString: 0
+		lineageTag: f0800437-9310-42db-90bf-68ecf8005e34
+		summarizeBy: none
+		sourceColumn: category_order
+
+	column total_patients
+		dataType: int64
+		formatString: #,0
+		lineageTag: dab69f77-08e7-4723-90c5-89e40cf25732
+		summarizeBy: none
+		sourceColumn: total_patients
+
+	column diagnosed_patients
+		dataType: int64
+		formatString: #,0
+		lineageTag: 16611a2d-8d96-416e-87f5-727fb9bb55dc
+		summarizeBy: none
+		sourceColumn: diagnosed_patients
+
+	column not_diagnosed_patients
+		dataType: int64
+		formatString: #,0
+		lineageTag: ebd5364a-3458-47ed-ab8f-a5f21b1ef450
+		summarizeBy: none
+		sourceColumn: not_diagnosed_patients
+
+	column diagnosis_rate_pct
+		dataType: double
+		formatString: 0.00
+		lineageTag: fab3fbe6-5569-4b40-b496-ec850677aaef
+		summarizeBy: none
+		sourceColumn: diagnosis_rate_pct
+
+	column average_age
+		dataType: double
+		formatString: 0.00
+		lineageTag: 77fbc878-6086-4efd-b24d-f67881ac3bb2
+		summarizeBy: none
+		sourceColumn: average_age
+
+	column average_mmse
+		dataType: double
+		formatString: 0.00
+		lineageTag: 620ff8f4-ab33-4331-a773-28003fe8bd50
+		summarizeBy: none
+		sourceColumn: average_mmse
+
+	partition gold_demographics = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents("C:\Users\chaima\Desktop\alzheimers-decision-analytics\data\gold\powerbi\gold_demographics.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					#"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					#"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {
+						{"demographic_key", type text},
+						{"group_type", type text},
+						{"group_type_order", Int64.Type},
+						{"group_value", type text},
+						{"category_order", Int64.Type},
+						{"total_patients", Int64.Type},
+						{"diagnosed_patients", Int64.Type},
+						{"not_diagnosed_patients", Int64.Type},
+						{"diagnosis_rate_pct", type number},
+						{"average_age", type number},
+						{"average_mmse", type number}
+					}, "en-GB")
+				in
+					#"Changed Type"
+

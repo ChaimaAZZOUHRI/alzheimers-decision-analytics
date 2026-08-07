@@ -1,0 +1,53 @@
+{
+  "name": "Alzheimer Elegant Medical",
+  "dataColors": [
+    "#0F4C5C",
+    "#2A9D8F",
+    "#4D7C8A",
+    "#F4A261",
+    "#E76F51",
+    "#7A9E9F",
+    "#264653",
+    "#A8DADC"
+  ],
+  "good": "#2A9D8F",
+  "neutral": "#F4A261",
+  "bad": "#E76F51",
+  "maximum": "#0F4C5C",
+  "center": "#F4A261",
+  "minimum": "#E8F4F6",
+  "null": "#D1D5DB",
+
+  "background": "#F7FAFC",
+  "foreground": "#1F2937",
+  "tableAccent": "#2A9D8F",
+
+  "firstLevelElements": "#1F2937",
+  "secondLevelElements": "#5B6770",
+  "thirdLevelElements": "#E5ECEF",
+  "fourthLevelElements": "#9CA3AF",
+  "secondaryBackground": "#EDF3F5",
+
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 32,
+      "color": "#0F4C5C"
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#0F4C5C"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#1F2937"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#374151"
+    }
+  }
+}

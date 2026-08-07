@@ -1,0 +1,245 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "00000000000000000036",
+  "position": {
+    "x": 430,
+    "y": 470,
+    "z": 6000,
+    "height": 225,
+    "width": 830,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_risk_factors"
+                    }
+                  },
+                  "Property": "risk_factor"
+                }
+              },
+              "queryRef": "gold_risk_factors.risk_factor",
+              "nativeQueryRef": "risk_factor",
+              "displayName": "Risk factor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_risk_factors"
+                    }
+                  },
+                  "Property": "factor_prevalence_pct"
+                }
+              },
+              "queryRef": "gold_risk_factors.factor_prevalence_pct",
+              "nativeQueryRef": "factor_prevalence_pct",
+              "displayName": "Prevalence (%)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_risk_factors"
+                    }
+                  },
+                  "Property": "diagnosis_rate_with_factor_pct"
+                }
+              },
+              "queryRef": "gold_risk_factors.diagnosis_rate_with_factor_pct",
+              "nativeQueryRef": "diagnosis_rate_with_factor_pct",
+              "displayName": "Diagnosis with factor (%)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_risk_factors"
+                    }
+                  },
+                  "Property": "diagnosis_rate_without_factor_pct"
+                }
+              },
+              "queryRef": "gold_risk_factors.diagnosis_rate_without_factor_pct",
+              "nativeQueryRef": "diagnosis_rate_without_factor_pct",
+              "displayName": "Diagnosis without factor (%)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_risk_factors"
+                    }
+                  },
+                  "Property": "diagnosis_rate_difference_pct_points"
+                }
+              },
+              "queryRef": "gold_risk_factors.diagnosis_rate_difference_pct_points",
+              "nativeQueryRef": "diagnosis_rate_difference_pct_points",
+              "displayName": "Difference (pp)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Risk-factor summary'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#DCE8EC'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+relationship 743246ee-3c54-4083-8f09-673b284726f3
+	fromColumn: fct_patient_assessment.patient_id
+	toColumn: dim_patient.patient_id
+
+relationship 7031b52e-fc9c-47e3-90b5-888ebe91e767
+	fromColumn: fct_patient_assessment.diagnosis_code
+	toColumn: dim_diagnosis.diagnosis_code
+
