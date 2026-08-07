@@ -40,3 +40,7 @@ Thumbs.db
 
 # Source dataset
 data/source/*.csv
+# Generated Power BI exports
+data/gold/powerbi/*.csv
+data/gold/powerbi/*.json
+!data/gold/powerbi/.gitkeep

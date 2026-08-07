@@ -154,3 +154,21 @@ SILVER_CSV_FILE = (
 SILVER_METADATA_FILE = (
     SILVER_DIR / "alzheimers_disease_data_silver_metadata.json"
 )
+
+# Analytical warehouse
+WAREHOUSE_DIR = DATA_DIR / "warehouse"
+
+DUCKDB_FILE = (
+    WAREHOUSE_DIR / "alzheimers_analytics.duckdb"
+)
+
+DUCKDB_METADATA_FILE = (
+    WAREHOUSE_DIR / "alzheimers_analytics_metadata.json"
+)
+
+# Power BI exports
+POWERBI_EXPORT_DIR = GOLD_DIR / "powerbi"
+
+POWERBI_EXPORT_METADATA_FILE = (
+    POWERBI_EXPORT_DIR / "powerbi_export_metadata.json"
+)
